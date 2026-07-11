@@ -70,9 +70,9 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install Appium & drivers
+      - name: Install Appium v3 & uiautomator2 driver
         run: |
-          npm install -g appium
+          npm install -g appium@next
           appium driver install uiautomator2
 
       - name: Enable KVM (Android emulator hardware acceleration)
@@ -83,7 +83,11 @@ jobs:
           sudo udevadm trigger --name-match=kvm
           sudo apt-get install -y libvirt-clients
 
-      - name: Set up Android emulator
+      - name: Build APK (debug)
+        working-directory: ./backend/android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Run Appium tests inside Android emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
@@ -91,22 +95,13 @@ jobs:
           arch: x86_64
           profile: Nexus 6
           script: |
-            adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done'
+            adb wait-for-device
+            adb shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done'
             echo "Emulator ready"
-
-      - name: Build APK (debug)
-        working-directory: ./backend/android
-        run: ./gradlew assembleDebug --no-daemon
-
-      - name: Install APK on emulator
-        run: adb install -r ./backend/android/app/build/outputs/apk/debug/app-debug.apk
-
-      - name: Start Appium server
-        run: appium &
-
-      - name: Run Appium tests
-        working-directory: ./backend
-        run: npm run test:appium || echo "No test:appium script found – skipping"
+            adb install -r ./backend/android/app/build/outputs/apk/debug/app-debug.apk
+            appium --relaxed-security &
+            sleep 5
+            npm run test:appium --prefix ./backend || echo "No test:appium script found – skipping"
 
       - name: Upload Appium test report
         if: always()
