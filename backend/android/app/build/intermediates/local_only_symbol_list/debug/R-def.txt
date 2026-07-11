@@ -1,9 +1,0 @@
-R_DEF: Internal format may change without notice
-local
-color agri_green
-color nav_bar
-color splash_bg
-color status_bar
-string app_name
-style Theme.AgriConnect
-style Theme.AgriConnect.Splash

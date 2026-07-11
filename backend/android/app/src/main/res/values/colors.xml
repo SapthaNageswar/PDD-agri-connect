@@ -16,4 +16,10 @@
     <color name="colorPrimary">#2E7D32</color>
     <color name="colorPrimaryDark">#1B5E20</color>
     <color name="colorAccent">#66BB6A</color>
+
+    <!-- Brand Green -->
+    <color name="agri_green">#2E7D32</color>
+
+    <!-- Primary window background color -->
+    <color name="bg_primary">#F5F5F5</color>
 </resources>
