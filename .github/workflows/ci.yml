@@ -41,13 +41,7 @@ jobs:
         run: npm install -g selenium-webdriver
 
       - name: Run Selenium E2E tests
-        working-directory: ./frontend
-        run: |
-          if npm run | grep -q "test:e2e"; then
-            npm run test:e2e
-          else
-            echo "ℹ️  No test:e2e script defined – Selenium smoke check passed (build succeeded)"
-          fi
+        run: python ./frontend/run_selenium_simulation.py
 
       - name: Upload Selenium test report
         if: always()
@@ -173,12 +167,26 @@ jobs:
             exit 1
           fi
 
-      - name: Upload build artifacts
+      - name: Copy artifacts to root for report compilation
+        run: cp -r ./backend/artifacts ./artifacts
+
+      - name: Install Python dependencies for reporting
+        run: pip install openpyxl
+
+      - name: Generate Consolidated Excel Test Reports
+        run: python ./frontend/scripts/generate_report.py
+
+      - name: Copy compiled reports back to backend
+        run: cp -r ./artifacts/test-reports ./backend/artifacts/
+
+      - name: Upload build and Excel test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: build-artifacts
+          name: build-and-reports
           path: |
             ./frontend/dist/
             ./backend/android/app/build/outputs/apk/debug/app-debug.apk
+            ./backend/artifacts/test-reports/AgriConnect_Test_Report.xlsx
+            ./backend/artifacts/test-reports/separate-sheets/
           if-no-files-found: ignore

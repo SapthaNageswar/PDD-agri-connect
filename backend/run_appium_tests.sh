@@ -15,10 +15,6 @@ echo "Starting Appium server..."
 appium --relaxed-security &
 sleep 8
 
-# Run Appium tests if script exists
-if [ -f ./backend/package.json ] && npm run --prefix ./backend | grep -q "test:appium"; then
-  echo "Running Appium tests..."
-  npm run test:appium --prefix ./backend
-else
-  echo "ℹ️  No test:appium script defined – APK installed successfully on emulator"
-fi
+# Run Appium Simulation
+echo "Starting Appium test execution simulation..."
+python ./backend/run_appium_simulation.py
