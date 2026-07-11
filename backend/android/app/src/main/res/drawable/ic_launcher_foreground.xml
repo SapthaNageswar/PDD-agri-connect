@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Green circle background -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+    <!-- Simple leaf/plant icon representing AgriConnect -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20 C38,20 25,33 25,54 C25,65 30,75 38,82 L38,70 C32,64 29,59 29,54 C29,35 40,24 54,24 C68,24 79,35 79,54 C79,59 76,64 70,70 L70,82 C78,75 83,65 83,54 C83,33 70,20 54,20 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,35 C54,35 40,45 40,60 C40,70 46,78 54,80 C62,78 68,70 68,60 C68,45 54,35 54,35 Z M54,72 C49,70 44,65 44,60 C44,49 52,41 54,39 C56,41 64,49 64,60 C64,65 59,70 54,72 Z" />
+</vector>
