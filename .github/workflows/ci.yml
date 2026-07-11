@@ -106,18 +106,7 @@ jobs:
           target: default
           arch: x86_64
           profile: Nexus 6
-          script: |
-            adb wait-for-device
-            adb shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done'
-            echo "✅ Emulator ready"
-            adb install -r ./backend/android/app/build/outputs/apk/debug/app-debug.apk
-            appium --relaxed-security &
-            sleep 8
-            if [ -f ./backend/package.json ] && npm run --prefix ./backend | grep -q "test:appium"; then
-              npm run test:appium --prefix ./backend
-            else
-              echo "ℹ️  No test:appium script defined – APK installed successfully on emulator"
-            fi
+          script: bash ./backend/run_appium_tests.sh
 
       - name: Upload Appium test report
         if: always()
