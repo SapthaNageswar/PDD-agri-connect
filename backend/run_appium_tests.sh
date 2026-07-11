@@ -10,11 +10,17 @@ echo "✅ Emulator ready"
 echo "Installing APK..."
 adb install -r ./backend/android/app/build/outputs/apk/debug/app-debug.apk
 
-# Start Appium server in background
+# Start Appium server in background and save its PID
 echo "Starting Appium server..."
 appium --relaxed-security &
+APPIUM_PID=$!
 sleep 8
 
 # Run Appium Simulation
 echo "Starting Appium test execution simulation..."
 python ./backend/run_appium_simulation.py
+
+# Terminate the Appium background process to prevent the runner from hanging
+echo "Terminating Appium server (PID: $APPIUM_PID)..."
+kill $APPIUM_PID || true
+echo "✅ Appium server stopped."
