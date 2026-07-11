@@ -1,0 +1,25 @@
+// Top-level build file — pure native Android (no Capacitor)
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.2'
+        // Uncomment after placing google-services.json in android/app/
+        // classpath 'com.google.gms:google-services:4.4.0'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // Required for MPAndroidChart
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

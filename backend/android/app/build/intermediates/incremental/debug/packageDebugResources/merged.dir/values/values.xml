@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="agri_green">#4caf50</color>
+    <color name="nav_bar">#0a3d0a</color>
+    <color name="splash_bg">#0a3d0a</color>
+    <color name="status_bar">#0a3d0a</color>
+    <string name="app_name">AgriConnect</string>
+    <style name="Theme.AgriConnect" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+    </style>
+    <style name="Theme.AgriConnect.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_bg</item>
+        <item name="postSplashScreenTheme">@style/Theme.AgriConnect</item>
+    </style>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/farmerDashboardFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item android:id="@+id/marketplaceFragment"
+        android:icon="@drawable/ic_marketplace"
+        android:title="Market"/>
+    <item android:id="@+id/advisoryFragment"
+        android:icon="@drawable/ic_advisory"
+        android:title="Advisory"/>
+    <item android:id="@+id/weatherFragment"
+        android:icon="@drawable/ic_weather"
+        android:title="Weather"/>
+    <item android:id="@+id/notificationsFragment"
+        android:icon="@drawable/ic_notifications"
+        android:title="Alerts"/>
+</menu>

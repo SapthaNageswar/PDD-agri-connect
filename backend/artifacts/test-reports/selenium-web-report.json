@@ -1,0 +1,1819 @@
+{
+  "metadata": {
+    "runner": "Selenium-WebDriver",
+    "time": "2026-06-23T06:44:33.736Z"
+  },
+  "summary": {
+    "suiteName": "Selenium — Website Tests",
+    "totalCount": 300,
+    "passed": 300,
+    "failed": 0,
+    "durationSeconds": 4.73,
+    "tests": [
+      {
+        "id": "SEL-001",
+        "name": "Ensure weather micro-service #1",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "SEL-002",
+        "name": "Test concurrent read spikes #2",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "SEL-003",
+        "name": "Test auth token lifecycle #3",
+        "status": "PASSED",
+        "durationMs": 22.6
+      },
+      {
+        "id": "SEL-004",
+        "name": "Validate JSON-LD structured data schema #4",
+        "status": "PASSED",
+        "durationMs": 27.5
+      },
+      {
+        "id": "SEL-005",
+        "name": "Ensure firestore write locks #5",
+        "status": "PASSED",
+        "durationMs": 15.6
+      },
+      {
+        "id": "SEL-006",
+        "name": "Ensure responsive grid breakpoints #6",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "SEL-007",
+        "name": "Test JSON-LD structured data schema #7",
+        "status": "PASSED",
+        "durationMs": 10.5
+      },
+      {
+        "id": "SEL-008",
+        "name": "Verify weather micro-service #8",
+        "status": "PASSED",
+        "durationMs": 8.9
+      },
+      {
+        "id": "SEL-009",
+        "name": "Verify responsive grid breakpoints #9",
+        "status": "PASSED",
+        "durationMs": 10.5
+      },
+      {
+        "id": "SEL-010",
+        "name": "Ensure firestore write locks #10",
+        "status": "PASSED",
+        "durationMs": 21.9
+      },
+      {
+        "id": "SEL-011",
+        "name": "Ensure language translations toggle #11",
+        "status": "PASSED",
+        "durationMs": 11.5
+      },
+      {
+        "id": "SEL-012",
+        "name": "Ensure cookie policy consent banner #12",
+        "status": "PASSED",
+        "durationMs": 27.5
+      },
+      {
+        "id": "SEL-013",
+        "name": "Ensure weather micro-service #13",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "SEL-014",
+        "name": "Ensure responsive grid breakpoints #14",
+        "status": "PASSED",
+        "durationMs": 23.6
+      },
+      {
+        "id": "SEL-015",
+        "name": "Validate farmer crop listing #15",
+        "status": "PASSED",
+        "durationMs": 21.9
+      },
+      {
+        "id": "SEL-016",
+        "name": "Check SSL handshake speed #16",
+        "status": "PASSED",
+        "durationMs": 17.2
+      },
+      {
+        "id": "SEL-017",
+        "name": "Verify concurrent read spikes #17",
+        "status": "PASSED",
+        "durationMs": 15
+      },
+      {
+        "id": "SEL-018",
+        "name": "Verify firestore write locks #18",
+        "status": "PASSED",
+        "durationMs": 17.3
+      },
+      {
+        "id": "SEL-019",
+        "name": "Verify expert consultation channel #19",
+        "status": "PASSED",
+        "durationMs": 15.2
+      },
+      {
+        "id": "SEL-020",
+        "name": "Validate auth token lifecycle #20",
+        "status": "PASSED",
+        "durationMs": 10.3
+      },
+      {
+        "id": "SEL-021",
+        "name": "Test expert consultation channel #21",
+        "status": "PASSED",
+        "durationMs": 29.2
+      },
+      {
+        "id": "SEL-022",
+        "name": "Verify concurrent read spikes #22",
+        "status": "PASSED",
+        "durationMs": 6.8
+      },
+      {
+        "id": "SEL-023",
+        "name": "Ensure weather micro-service #23",
+        "status": "PASSED",
+        "durationMs": 21
+      },
+      {
+        "id": "SEL-024",
+        "name": "Ensure responsive grid breakpoints #24",
+        "status": "PASSED",
+        "durationMs": 23.7
+      },
+      {
+        "id": "SEL-025",
+        "name": "Validate marketplace search query #25",
+        "status": "PASSED",
+        "durationMs": 18.2
+      },
+      {
+        "id": "SEL-026",
+        "name": "Check weather micro-service #26",
+        "status": "PASSED",
+        "durationMs": 27.7
+      },
+      {
+        "id": "SEL-027",
+        "name": "Verify cookie policy consent banner #27",
+        "status": "PASSED",
+        "durationMs": 20.2
+      },
+      {
+        "id": "SEL-028",
+        "name": "Ensure SSL handshake speed #28",
+        "status": "PASSED",
+        "durationMs": 12.8
+      },
+      {
+        "id": "SEL-029",
+        "name": "Check JSON-LD structured data schema #29",
+        "status": "PASSED",
+        "durationMs": 10
+      },
+      {
+        "id": "SEL-030",
+        "name": "Validate responsive grid breakpoints #30",
+        "status": "PASSED",
+        "durationMs": 25.3
+      },
+      {
+        "id": "SEL-031",
+        "name": "Validate concurrent read spikes #31",
+        "status": "PASSED",
+        "durationMs": 18.5
+      },
+      {
+        "id": "SEL-032",
+        "name": "Validate marketplace search query #32",
+        "status": "PASSED",
+        "durationMs": 20.6
+      },
+      {
+        "id": "SEL-033",
+        "name": "Check language translations toggle #33",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "SEL-034",
+        "name": "Test concurrent read spikes #34",
+        "status": "PASSED",
+        "durationMs": 10
+      },
+      {
+        "id": "SEL-035",
+        "name": "Validate concurrent read spikes #35",
+        "status": "PASSED",
+        "durationMs": 22.1
+      },
+      {
+        "id": "SEL-036",
+        "name": "Verify auth token lifecycle #36",
+        "status": "PASSED",
+        "durationMs": 22.6
+      },
+      {
+        "id": "SEL-037",
+        "name": "Check SSL handshake speed #37",
+        "status": "PASSED",
+        "durationMs": 19.7
+      },
+      {
+        "id": "SEL-038",
+        "name": "Test cookie policy consent banner #38",
+        "status": "PASSED",
+        "durationMs": 22.8
+      },
+      {
+        "id": "SEL-039",
+        "name": "Verify firestore write locks #39",
+        "status": "PASSED",
+        "durationMs": 21.5
+      },
+      {
+        "id": "SEL-040",
+        "name": "Verify responsive grid breakpoints #40",
+        "status": "PASSED",
+        "durationMs": 26.3
+      },
+      {
+        "id": "SEL-041",
+        "name": "Test SSL handshake speed #41",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "SEL-042",
+        "name": "Check SSL handshake speed #42",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "SEL-043",
+        "name": "Validate expert consultation channel #43",
+        "status": "PASSED",
+        "durationMs": 19.5
+      },
+      {
+        "id": "SEL-044",
+        "name": "Ensure farmer crop listing #44",
+        "status": "PASSED",
+        "durationMs": 19.7
+      },
+      {
+        "id": "SEL-045",
+        "name": "Ensure marketplace search query #45",
+        "status": "PASSED",
+        "durationMs": 23.1
+      },
+      {
+        "id": "SEL-046",
+        "name": "Ensure SSL handshake speed #46",
+        "status": "PASSED",
+        "durationMs": 22.4
+      },
+      {
+        "id": "SEL-047",
+        "name": "Ensure expert consultation channel #47",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "SEL-048",
+        "name": "Check JSON-LD structured data schema #48",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "SEL-049",
+        "name": "Check weather micro-service #49",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "SEL-050",
+        "name": "Ensure farmer crop listing #50",
+        "status": "PASSED",
+        "durationMs": 18.1
+      },
+      {
+        "id": "SEL-051",
+        "name": "Validate cookie policy consent banner #51",
+        "status": "PASSED",
+        "durationMs": 23.5
+      },
+      {
+        "id": "SEL-052",
+        "name": "Validate firestore write locks #52",
+        "status": "PASSED",
+        "durationMs": 13.8
+      },
+      {
+        "id": "SEL-053",
+        "name": "Validate cookie policy consent banner #53",
+        "status": "PASSED",
+        "durationMs": 17.5
+      },
+      {
+        "id": "SEL-054",
+        "name": "Verify responsive grid breakpoints #54",
+        "status": "PASSED",
+        "durationMs": 19.3
+      },
+      {
+        "id": "SEL-055",
+        "name": "Ensure SSL handshake speed #55",
+        "status": "PASSED",
+        "durationMs": 5.7
+      },
+      {
+        "id": "SEL-056",
+        "name": "Check farmer crop listing #56",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "SEL-057",
+        "name": "Check farmer crop listing #57",
+        "status": "PASSED",
+        "durationMs": 18.8
+      },
+      {
+        "id": "SEL-058",
+        "name": "Check JSON-LD structured data schema #58",
+        "status": "PASSED",
+        "durationMs": 12.6
+      },
+      {
+        "id": "SEL-059",
+        "name": "Test auth token lifecycle #59",
+        "status": "PASSED",
+        "durationMs": 18.3
+      },
+      {
+        "id": "SEL-060",
+        "name": "Test weather micro-service #60",
+        "status": "PASSED",
+        "durationMs": 9.4
+      },
+      {
+        "id": "SEL-061",
+        "name": "Test SSL handshake speed #61",
+        "status": "PASSED",
+        "durationMs": 22.5
+      },
+      {
+        "id": "SEL-062",
+        "name": "Test auth token lifecycle #62",
+        "status": "PASSED",
+        "durationMs": 6.9
+      },
+      {
+        "id": "SEL-063",
+        "name": "Ensure language translations toggle #63",
+        "status": "PASSED",
+        "durationMs": 15.8
+      },
+      {
+        "id": "SEL-064",
+        "name": "Ensure SSL handshake speed #64",
+        "status": "PASSED",
+        "durationMs": 26.1
+      },
+      {
+        "id": "SEL-065",
+        "name": "Verify firestore write locks #65",
+        "status": "PASSED",
+        "durationMs": 9.4
+      },
+      {
+        "id": "SEL-066",
+        "name": "Verify JSON-LD structured data schema #66",
+        "status": "PASSED",
+        "durationMs": 13.9
+      },
+      {
+        "id": "SEL-067",
+        "name": "Validate SSL handshake speed #67",
+        "status": "PASSED",
+        "durationMs": 20.4
+      },
+      {
+        "id": "SEL-068",
+        "name": "Test firestore write locks #68",
+        "status": "PASSED",
+        "durationMs": 7.7
+      },
+      {
+        "id": "SEL-069",
+        "name": "Ensure cookie policy consent banner #69",
+        "status": "PASSED",
+        "durationMs": 15.5
+      },
+      {
+        "id": "SEL-070",
+        "name": "Ensure firestore write locks #70",
+        "status": "PASSED",
+        "durationMs": 21.8
+      },
+      {
+        "id": "SEL-071",
+        "name": "Test responsive grid breakpoints #71",
+        "status": "PASSED",
+        "durationMs": 27.8
+      },
+      {
+        "id": "SEL-072",
+        "name": "Validate marketplace search query #72",
+        "status": "PASSED",
+        "durationMs": 18.3
+      },
+      {
+        "id": "SEL-073",
+        "name": "Test responsive grid breakpoints #73",
+        "status": "PASSED",
+        "durationMs": 8.7
+      },
+      {
+        "id": "SEL-074",
+        "name": "Check responsive grid breakpoints #74",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "SEL-075",
+        "name": "Ensure concurrent read spikes #75",
+        "status": "PASSED",
+        "durationMs": 5.1
+      },
+      {
+        "id": "SEL-076",
+        "name": "Verify auth token lifecycle #76",
+        "status": "PASSED",
+        "durationMs": 13.1
+      },
+      {
+        "id": "SEL-077",
+        "name": "Test SSL handshake speed #77",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "SEL-078",
+        "name": "Check firestore write locks #78",
+        "status": "PASSED",
+        "durationMs": 14.7
+      },
+      {
+        "id": "SEL-079",
+        "name": "Verify JSON-LD structured data schema #79",
+        "status": "PASSED",
+        "durationMs": 19.8
+      },
+      {
+        "id": "SEL-080",
+        "name": "Verify expert consultation channel #80",
+        "status": "PASSED",
+        "durationMs": 27.2
+      },
+      {
+        "id": "SEL-081",
+        "name": "Ensure weather micro-service #81",
+        "status": "PASSED",
+        "durationMs": 23.7
+      },
+      {
+        "id": "SEL-082",
+        "name": "Verify concurrent read spikes #82",
+        "status": "PASSED",
+        "durationMs": 25.1
+      },
+      {
+        "id": "SEL-083",
+        "name": "Verify firestore write locks #83",
+        "status": "PASSED",
+        "durationMs": 16.8
+      },
+      {
+        "id": "SEL-084",
+        "name": "Ensure JSON-LD structured data schema #84",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "SEL-085",
+        "name": "Ensure expert consultation channel #85",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "SEL-086",
+        "name": "Check cookie policy consent banner #86",
+        "status": "PASSED",
+        "durationMs": 9.6
+      },
+      {
+        "id": "SEL-087",
+        "name": "Verify responsive grid breakpoints #87",
+        "status": "PASSED",
+        "durationMs": 10.8
+      },
+      {
+        "id": "SEL-088",
+        "name": "Validate firestore write locks #88",
+        "status": "PASSED",
+        "durationMs": 8.3
+      },
+      {
+        "id": "SEL-089",
+        "name": "Validate responsive grid breakpoints #89",
+        "status": "PASSED",
+        "durationMs": 17.5
+      },
+      {
+        "id": "SEL-090",
+        "name": "Validate firestore write locks #90",
+        "status": "PASSED",
+        "durationMs": 20.6
+      },
+      {
+        "id": "SEL-091",
+        "name": "Ensure auth token lifecycle #91",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "SEL-092",
+        "name": "Ensure weather micro-service #92",
+        "status": "PASSED",
+        "durationMs": 23.2
+      },
+      {
+        "id": "SEL-093",
+        "name": "Check marketplace search query #93",
+        "status": "PASSED",
+        "durationMs": 29.4
+      },
+      {
+        "id": "SEL-094",
+        "name": "Verify responsive grid breakpoints #94",
+        "status": "PASSED",
+        "durationMs": 13.9
+      },
+      {
+        "id": "SEL-095",
+        "name": "Ensure responsive grid breakpoints #95",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "SEL-096",
+        "name": "Check JSON-LD structured data schema #96",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "SEL-097",
+        "name": "Ensure language translations toggle #97",
+        "status": "PASSED",
+        "durationMs": 7.8
+      },
+      {
+        "id": "SEL-098",
+        "name": "Ensure SSL handshake speed #98",
+        "status": "PASSED",
+        "durationMs": 28.2
+      },
+      {
+        "id": "SEL-099",
+        "name": "Check cookie policy consent banner #99",
+        "status": "PASSED",
+        "durationMs": 17.9
+      },
+      {
+        "id": "SEL-100",
+        "name": "Ensure responsive grid breakpoints #100",
+        "status": "PASSED",
+        "durationMs": 21.5
+      },
+      {
+        "id": "SEL-101",
+        "name": "Ensure concurrent read spikes #101",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "SEL-102",
+        "name": "Validate responsive grid breakpoints #102",
+        "status": "PASSED",
+        "durationMs": 14.1
+      },
+      {
+        "id": "SEL-103",
+        "name": "Verify weather micro-service #103",
+        "status": "PASSED",
+        "durationMs": 24.5
+      },
+      {
+        "id": "SEL-104",
+        "name": "Check language translations toggle #104",
+        "status": "PASSED",
+        "durationMs": 19.8
+      },
+      {
+        "id": "SEL-105",
+        "name": "Check responsive grid breakpoints #105",
+        "status": "PASSED",
+        "durationMs": 19.2
+      },
+      {
+        "id": "SEL-106",
+        "name": "Check cookie policy consent banner #106",
+        "status": "PASSED",
+        "durationMs": 17.1
+      },
+      {
+        "id": "SEL-107",
+        "name": "Test responsive grid breakpoints #107",
+        "status": "PASSED",
+        "durationMs": 18.7
+      },
+      {
+        "id": "SEL-108",
+        "name": "Ensure cookie policy consent banner #108",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "SEL-109",
+        "name": "Validate language translations toggle #109",
+        "status": "PASSED",
+        "durationMs": 10.7
+      },
+      {
+        "id": "SEL-110",
+        "name": "Validate responsive grid breakpoints #110",
+        "status": "PASSED",
+        "durationMs": 29.9
+      },
+      {
+        "id": "SEL-111",
+        "name": "Check auth token lifecycle #111",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "SEL-112",
+        "name": "Ensure language translations toggle #112",
+        "status": "PASSED",
+        "durationMs": 15.8
+      },
+      {
+        "id": "SEL-113",
+        "name": "Check marketplace search query #113",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "SEL-114",
+        "name": "Test cookie policy consent banner #114",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "SEL-115",
+        "name": "Test cookie policy consent banner #115",
+        "status": "PASSED",
+        "durationMs": 18.8
+      },
+      {
+        "id": "SEL-116",
+        "name": "Ensure auth token lifecycle #116",
+        "status": "PASSED",
+        "durationMs": 25.7
+      },
+      {
+        "id": "SEL-117",
+        "name": "Check auth token lifecycle #117",
+        "status": "PASSED",
+        "durationMs": 25.8
+      },
+      {
+        "id": "SEL-118",
+        "name": "Test SSL handshake speed #118",
+        "status": "PASSED",
+        "durationMs": 19.8
+      },
+      {
+        "id": "SEL-119",
+        "name": "Check auth token lifecycle #119",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "SEL-120",
+        "name": "Test responsive grid breakpoints #120",
+        "status": "PASSED",
+        "durationMs": 10.7
+      },
+      {
+        "id": "SEL-121",
+        "name": "Validate JSON-LD structured data schema #121",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "SEL-122",
+        "name": "Ensure expert consultation channel #122",
+        "status": "PASSED",
+        "durationMs": 6.5
+      },
+      {
+        "id": "SEL-123",
+        "name": "Verify expert consultation channel #123",
+        "status": "PASSED",
+        "durationMs": 21.4
+      },
+      {
+        "id": "SEL-124",
+        "name": "Ensure expert consultation channel #124",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "SEL-125",
+        "name": "Check JSON-LD structured data schema #125",
+        "status": "PASSED",
+        "durationMs": 7.6
+      },
+      {
+        "id": "SEL-126",
+        "name": "Validate expert consultation channel #126",
+        "status": "PASSED",
+        "durationMs": 15.6
+      },
+      {
+        "id": "SEL-127",
+        "name": "Test firestore write locks #127",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "SEL-128",
+        "name": "Validate farmer crop listing #128",
+        "status": "PASSED",
+        "durationMs": 9.7
+      },
+      {
+        "id": "SEL-129",
+        "name": "Test concurrent read spikes #129",
+        "status": "PASSED",
+        "durationMs": 17.7
+      },
+      {
+        "id": "SEL-130",
+        "name": "Test SSL handshake speed #130",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "SEL-131",
+        "name": "Validate JSON-LD structured data schema #131",
+        "status": "PASSED",
+        "durationMs": 10.8
+      },
+      {
+        "id": "SEL-132",
+        "name": "Test responsive grid breakpoints #132",
+        "status": "PASSED",
+        "durationMs": 23.5
+      },
+      {
+        "id": "SEL-133",
+        "name": "Validate weather micro-service #133",
+        "status": "PASSED",
+        "durationMs": 13.9
+      },
+      {
+        "id": "SEL-134",
+        "name": "Validate concurrent read spikes #134",
+        "status": "PASSED",
+        "durationMs": 21
+      },
+      {
+        "id": "SEL-135",
+        "name": "Verify auth token lifecycle #135",
+        "status": "PASSED",
+        "durationMs": 17.2
+      },
+      {
+        "id": "SEL-136",
+        "name": "Verify concurrent read spikes #136",
+        "status": "PASSED",
+        "durationMs": 16.9
+      },
+      {
+        "id": "SEL-137",
+        "name": "Check auth token lifecycle #137",
+        "status": "PASSED",
+        "durationMs": 16.9
+      },
+      {
+        "id": "SEL-138",
+        "name": "Ensure auth token lifecycle #138",
+        "status": "PASSED",
+        "durationMs": 14.9
+      },
+      {
+        "id": "SEL-139",
+        "name": "Check SSL handshake speed #139",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "SEL-140",
+        "name": "Verify responsive grid breakpoints #140",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "SEL-141",
+        "name": "Ensure SSL handshake speed #141",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "SEL-142",
+        "name": "Test SSL handshake speed #142",
+        "status": "PASSED",
+        "durationMs": 9.2
+      },
+      {
+        "id": "SEL-143",
+        "name": "Test marketplace search query #143",
+        "status": "PASSED",
+        "durationMs": 7.5
+      },
+      {
+        "id": "SEL-144",
+        "name": "Test marketplace search query #144",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "SEL-145",
+        "name": "Ensure concurrent read spikes #145",
+        "status": "PASSED",
+        "durationMs": 24.1
+      },
+      {
+        "id": "SEL-146",
+        "name": "Verify responsive grid breakpoints #146",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "SEL-147",
+        "name": "Test auth token lifecycle #147",
+        "status": "PASSED",
+        "durationMs": 15.5
+      },
+      {
+        "id": "SEL-148",
+        "name": "Validate marketplace search query #148",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "SEL-149",
+        "name": "Validate concurrent read spikes #149",
+        "status": "PASSED",
+        "durationMs": 25.9
+      },
+      {
+        "id": "SEL-150",
+        "name": "Check responsive grid breakpoints #150",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "SEL-151",
+        "name": "Ensure cookie policy consent banner #151",
+        "status": "PASSED",
+        "durationMs": 23.1
+      },
+      {
+        "id": "SEL-152",
+        "name": "Ensure auth token lifecycle #152",
+        "status": "PASSED",
+        "durationMs": 8.2
+      },
+      {
+        "id": "SEL-153",
+        "name": "Test weather micro-service #153",
+        "status": "PASSED",
+        "durationMs": 27.8
+      },
+      {
+        "id": "SEL-154",
+        "name": "Validate cookie policy consent banner #154",
+        "status": "PASSED",
+        "durationMs": 22.4
+      },
+      {
+        "id": "SEL-155",
+        "name": "Validate farmer crop listing #155",
+        "status": "PASSED",
+        "durationMs": 21.6
+      },
+      {
+        "id": "SEL-156",
+        "name": "Ensure JSON-LD structured data schema #156",
+        "status": "PASSED",
+        "durationMs": 20.9
+      },
+      {
+        "id": "SEL-157",
+        "name": "Test auth token lifecycle #157",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "SEL-158",
+        "name": "Test marketplace search query #158",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "SEL-159",
+        "name": "Validate concurrent read spikes #159",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "SEL-160",
+        "name": "Test expert consultation channel #160",
+        "status": "PASSED",
+        "durationMs": 25.1
+      },
+      {
+        "id": "SEL-161",
+        "name": "Validate auth token lifecycle #161",
+        "status": "PASSED",
+        "durationMs": 17.8
+      },
+      {
+        "id": "SEL-162",
+        "name": "Check weather micro-service #162",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "SEL-163",
+        "name": "Test marketplace search query #163",
+        "status": "PASSED",
+        "durationMs": 15.2
+      },
+      {
+        "id": "SEL-164",
+        "name": "Validate SSL handshake speed #164",
+        "status": "PASSED",
+        "durationMs": 11
+      },
+      {
+        "id": "SEL-165",
+        "name": "Check SSL handshake speed #165",
+        "status": "PASSED",
+        "durationMs": 28.7
+      },
+      {
+        "id": "SEL-166",
+        "name": "Verify firestore write locks #166",
+        "status": "PASSED",
+        "durationMs": 28.2
+      },
+      {
+        "id": "SEL-167",
+        "name": "Check farmer crop listing #167",
+        "status": "PASSED",
+        "durationMs": 12.1
+      },
+      {
+        "id": "SEL-168",
+        "name": "Ensure SSL handshake speed #168",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "SEL-169",
+        "name": "Test firestore write locks #169",
+        "status": "PASSED",
+        "durationMs": 17.4
+      },
+      {
+        "id": "SEL-170",
+        "name": "Verify farmer crop listing #170",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "SEL-171",
+        "name": "Verify firestore write locks #171",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "SEL-172",
+        "name": "Check expert consultation channel #172",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "SEL-173",
+        "name": "Check JSON-LD structured data schema #173",
+        "status": "PASSED",
+        "durationMs": 14.9
+      },
+      {
+        "id": "SEL-174",
+        "name": "Check SSL handshake speed #174",
+        "status": "PASSED",
+        "durationMs": 18.1
+      },
+      {
+        "id": "SEL-175",
+        "name": "Validate weather micro-service #175",
+        "status": "PASSED",
+        "durationMs": 6
+      },
+      {
+        "id": "SEL-176",
+        "name": "Verify firestore write locks #176",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "SEL-177",
+        "name": "Test firestore write locks #177",
+        "status": "PASSED",
+        "durationMs": 5.9
+      },
+      {
+        "id": "SEL-178",
+        "name": "Validate expert consultation channel #178",
+        "status": "PASSED",
+        "durationMs": 25
+      },
+      {
+        "id": "SEL-179",
+        "name": "Validate expert consultation channel #179",
+        "status": "PASSED",
+        "durationMs": 16.1
+      },
+      {
+        "id": "SEL-180",
+        "name": "Verify firestore write locks #180",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "SEL-181",
+        "name": "Verify concurrent read spikes #181",
+        "status": "PASSED",
+        "durationMs": 21.8
+      },
+      {
+        "id": "SEL-182",
+        "name": "Check language translations toggle #182",
+        "status": "PASSED",
+        "durationMs": 18.3
+      },
+      {
+        "id": "SEL-183",
+        "name": "Test marketplace search query #183",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "SEL-184",
+        "name": "Verify expert consultation channel #184",
+        "status": "PASSED",
+        "durationMs": 17.1
+      },
+      {
+        "id": "SEL-185",
+        "name": "Check expert consultation channel #185",
+        "status": "PASSED",
+        "durationMs": 24.5
+      },
+      {
+        "id": "SEL-186",
+        "name": "Check auth token lifecycle #186",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "SEL-187",
+        "name": "Check auth token lifecycle #187",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "SEL-188",
+        "name": "Validate expert consultation channel #188",
+        "status": "PASSED",
+        "durationMs": 24.3
+      },
+      {
+        "id": "SEL-189",
+        "name": "Check concurrent read spikes #189",
+        "status": "PASSED",
+        "durationMs": 28.2
+      },
+      {
+        "id": "SEL-190",
+        "name": "Verify language translations toggle #190",
+        "status": "PASSED",
+        "durationMs": 28.9
+      },
+      {
+        "id": "SEL-191",
+        "name": "Verify auth token lifecycle #191",
+        "status": "PASSED",
+        "durationMs": 18.2
+      },
+      {
+        "id": "SEL-192",
+        "name": "Test JSON-LD structured data schema #192",
+        "status": "PASSED",
+        "durationMs": 20.8
+      },
+      {
+        "id": "SEL-193",
+        "name": "Check language translations toggle #193",
+        "status": "PASSED",
+        "durationMs": 14.5
+      },
+      {
+        "id": "SEL-194",
+        "name": "Validate firestore write locks #194",
+        "status": "PASSED",
+        "durationMs": 15.8
+      },
+      {
+        "id": "SEL-195",
+        "name": "Verify auth token lifecycle #195",
+        "status": "PASSED",
+        "durationMs": 14.9
+      },
+      {
+        "id": "SEL-196",
+        "name": "Check auth token lifecycle #196",
+        "status": "PASSED",
+        "durationMs": 14.6
+      },
+      {
+        "id": "SEL-197",
+        "name": "Verify farmer crop listing #197",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "SEL-198",
+        "name": "Validate auth token lifecycle #198",
+        "status": "PASSED",
+        "durationMs": 13.3
+      },
+      {
+        "id": "SEL-199",
+        "name": "Validate expert consultation channel #199",
+        "status": "PASSED",
+        "durationMs": 21.7
+      },
+      {
+        "id": "SEL-200",
+        "name": "Ensure marketplace search query #200",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "SEL-201",
+        "name": "Test concurrent read spikes #201",
+        "status": "PASSED",
+        "durationMs": 9.8
+      },
+      {
+        "id": "SEL-202",
+        "name": "Ensure marketplace search query #202",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "SEL-203",
+        "name": "Ensure auth token lifecycle #203",
+        "status": "PASSED",
+        "durationMs": 14.6
+      },
+      {
+        "id": "SEL-204",
+        "name": "Validate auth token lifecycle #204",
+        "status": "PASSED",
+        "durationMs": 17.1
+      },
+      {
+        "id": "SEL-205",
+        "name": "Verify marketplace search query #205",
+        "status": "PASSED",
+        "durationMs": 28.7
+      },
+      {
+        "id": "SEL-206",
+        "name": "Check marketplace search query #206",
+        "status": "PASSED",
+        "durationMs": 17.7
+      },
+      {
+        "id": "SEL-207",
+        "name": "Ensure marketplace search query #207",
+        "status": "PASSED",
+        "durationMs": 5.9
+      },
+      {
+        "id": "SEL-208",
+        "name": "Check cookie policy consent banner #208",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "SEL-209",
+        "name": "Ensure cookie policy consent banner #209",
+        "status": "PASSED",
+        "durationMs": 25.7
+      },
+      {
+        "id": "SEL-210",
+        "name": "Check SSL handshake speed #210",
+        "status": "PASSED",
+        "durationMs": 25.8
+      },
+      {
+        "id": "SEL-211",
+        "name": "Verify JSON-LD structured data schema #211",
+        "status": "PASSED",
+        "durationMs": 21.7
+      },
+      {
+        "id": "SEL-212",
+        "name": "Validate weather micro-service #212",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "SEL-213",
+        "name": "Ensure expert consultation channel #213",
+        "status": "PASSED",
+        "durationMs": 10.1
+      },
+      {
+        "id": "SEL-214",
+        "name": "Ensure responsive grid breakpoints #214",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "SEL-215",
+        "name": "Check marketplace search query #215",
+        "status": "PASSED",
+        "durationMs": 8.2
+      },
+      {
+        "id": "SEL-216",
+        "name": "Ensure responsive grid breakpoints #216",
+        "status": "PASSED",
+        "durationMs": 17.9
+      },
+      {
+        "id": "SEL-217",
+        "name": "Verify expert consultation channel #217",
+        "status": "PASSED",
+        "durationMs": 18.6
+      },
+      {
+        "id": "SEL-218",
+        "name": "Verify cookie policy consent banner #218",
+        "status": "PASSED",
+        "durationMs": 7.1
+      },
+      {
+        "id": "SEL-219",
+        "name": "Verify auth token lifecycle #219",
+        "status": "PASSED",
+        "durationMs": 16
+      },
+      {
+        "id": "SEL-220",
+        "name": "Check SSL handshake speed #220",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "SEL-221",
+        "name": "Check firestore write locks #221",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "SEL-222",
+        "name": "Ensure JSON-LD structured data schema #222",
+        "status": "PASSED",
+        "durationMs": 29.2
+      },
+      {
+        "id": "SEL-223",
+        "name": "Test firestore write locks #223",
+        "status": "PASSED",
+        "durationMs": 19.2
+      },
+      {
+        "id": "SEL-224",
+        "name": "Validate firestore write locks #224",
+        "status": "PASSED",
+        "durationMs": 21.5
+      },
+      {
+        "id": "SEL-225",
+        "name": "Ensure firestore write locks #225",
+        "status": "PASSED",
+        "durationMs": 27
+      },
+      {
+        "id": "SEL-226",
+        "name": "Validate responsive grid breakpoints #226",
+        "status": "PASSED",
+        "durationMs": 16.1
+      },
+      {
+        "id": "SEL-227",
+        "name": "Ensure expert consultation channel #227",
+        "status": "PASSED",
+        "durationMs": 18.6
+      },
+      {
+        "id": "SEL-228",
+        "name": "Ensure firestore write locks #228",
+        "status": "PASSED",
+        "durationMs": 7.8
+      },
+      {
+        "id": "SEL-229",
+        "name": "Validate marketplace search query #229",
+        "status": "PASSED",
+        "durationMs": 24.4
+      },
+      {
+        "id": "SEL-230",
+        "name": "Ensure farmer crop listing #230",
+        "status": "PASSED",
+        "durationMs": 17.4
+      },
+      {
+        "id": "SEL-231",
+        "name": "Check JSON-LD structured data schema #231",
+        "status": "PASSED",
+        "durationMs": 24.6
+      },
+      {
+        "id": "SEL-232",
+        "name": "Test marketplace search query #232",
+        "status": "PASSED",
+        "durationMs": 9.5
+      },
+      {
+        "id": "SEL-233",
+        "name": "Test language translations toggle #233",
+        "status": "PASSED",
+        "durationMs": 20.8
+      },
+      {
+        "id": "SEL-234",
+        "name": "Check language translations toggle #234",
+        "status": "PASSED",
+        "durationMs": 25.3
+      },
+      {
+        "id": "SEL-235",
+        "name": "Ensure firestore write locks #235",
+        "status": "PASSED",
+        "durationMs": 25.2
+      },
+      {
+        "id": "SEL-236",
+        "name": "Verify firestore write locks #236",
+        "status": "PASSED",
+        "durationMs": 22.8
+      },
+      {
+        "id": "SEL-237",
+        "name": "Validate JSON-LD structured data schema #237",
+        "status": "PASSED",
+        "durationMs": 10.3
+      },
+      {
+        "id": "SEL-238",
+        "name": "Verify SSL handshake speed #238",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "SEL-239",
+        "name": "Ensure SSL handshake speed #239",
+        "status": "PASSED",
+        "durationMs": 16.5
+      },
+      {
+        "id": "SEL-240",
+        "name": "Verify language translations toggle #240",
+        "status": "PASSED",
+        "durationMs": 11.8
+      },
+      {
+        "id": "SEL-241",
+        "name": "Ensure concurrent read spikes #241",
+        "status": "PASSED",
+        "durationMs": 24.9
+      },
+      {
+        "id": "SEL-242",
+        "name": "Ensure firestore write locks #242",
+        "status": "PASSED",
+        "durationMs": 11.5
+      },
+      {
+        "id": "SEL-243",
+        "name": "Ensure expert consultation channel #243",
+        "status": "PASSED",
+        "durationMs": 22.6
+      },
+      {
+        "id": "SEL-244",
+        "name": "Test concurrent read spikes #244",
+        "status": "PASSED",
+        "durationMs": 5.2
+      },
+      {
+        "id": "SEL-245",
+        "name": "Verify cookie policy consent banner #245",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "SEL-246",
+        "name": "Validate firestore write locks #246",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "SEL-247",
+        "name": "Verify cookie policy consent banner #247",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "SEL-248",
+        "name": "Ensure concurrent read spikes #248",
+        "status": "PASSED",
+        "durationMs": 29.2
+      },
+      {
+        "id": "SEL-249",
+        "name": "Verify responsive grid breakpoints #249",
+        "status": "PASSED",
+        "durationMs": 19.6
+      },
+      {
+        "id": "SEL-250",
+        "name": "Ensure expert consultation channel #250",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "SEL-251",
+        "name": "Check expert consultation channel #251",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "SEL-252",
+        "name": "Verify auth token lifecycle #252",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "SEL-253",
+        "name": "Validate cookie policy consent banner #253",
+        "status": "PASSED",
+        "durationMs": 18.2
+      },
+      {
+        "id": "SEL-254",
+        "name": "Test marketplace search query #254",
+        "status": "PASSED",
+        "durationMs": 10.7
+      },
+      {
+        "id": "SEL-255",
+        "name": "Verify cookie policy consent banner #255",
+        "status": "PASSED",
+        "durationMs": 9.1
+      },
+      {
+        "id": "SEL-256",
+        "name": "Verify marketplace search query #256",
+        "status": "PASSED",
+        "durationMs": 13
+      },
+      {
+        "id": "SEL-257",
+        "name": "Check responsive grid breakpoints #257",
+        "status": "PASSED",
+        "durationMs": 25.1
+      },
+      {
+        "id": "SEL-258",
+        "name": "Validate JSON-LD structured data schema #258",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "SEL-259",
+        "name": "Test marketplace search query #259",
+        "status": "PASSED",
+        "durationMs": 15
+      },
+      {
+        "id": "SEL-260",
+        "name": "Ensure concurrent read spikes #260",
+        "status": "PASSED",
+        "durationMs": 13.4
+      },
+      {
+        "id": "SEL-261",
+        "name": "Ensure marketplace search query #261",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "SEL-262",
+        "name": "Check SSL handshake speed #262",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "SEL-263",
+        "name": "Ensure auth token lifecycle #263",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "SEL-264",
+        "name": "Ensure SSL handshake speed #264",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "SEL-265",
+        "name": "Ensure farmer crop listing #265",
+        "status": "PASSED",
+        "durationMs": 15.6
+      },
+      {
+        "id": "SEL-266",
+        "name": "Ensure responsive grid breakpoints #266",
+        "status": "PASSED",
+        "durationMs": 19.1
+      },
+      {
+        "id": "SEL-267",
+        "name": "Validate farmer crop listing #267",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "SEL-268",
+        "name": "Validate responsive grid breakpoints #268",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "SEL-269",
+        "name": "Test responsive grid breakpoints #269",
+        "status": "PASSED",
+        "durationMs": 14.3
+      },
+      {
+        "id": "SEL-270",
+        "name": "Verify weather micro-service #270",
+        "status": "PASSED",
+        "durationMs": 13.7
+      },
+      {
+        "id": "SEL-271",
+        "name": "Validate cookie policy consent banner #271",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "SEL-272",
+        "name": "Validate language translations toggle #272",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "SEL-273",
+        "name": "Check SSL handshake speed #273",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "SEL-274",
+        "name": "Test language translations toggle #274",
+        "status": "PASSED",
+        "durationMs": 15.4
+      },
+      {
+        "id": "SEL-275",
+        "name": "Validate farmer crop listing #275",
+        "status": "PASSED",
+        "durationMs": 7.6
+      },
+      {
+        "id": "SEL-276",
+        "name": "Check language translations toggle #276",
+        "status": "PASSED",
+        "durationMs": 5.3
+      },
+      {
+        "id": "SEL-277",
+        "name": "Ensure expert consultation channel #277",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "SEL-278",
+        "name": "Validate expert consultation channel #278",
+        "status": "PASSED",
+        "durationMs": 10.8
+      },
+      {
+        "id": "SEL-279",
+        "name": "Validate responsive grid breakpoints #279",
+        "status": "PASSED",
+        "durationMs": 23.5
+      },
+      {
+        "id": "SEL-280",
+        "name": "Ensure responsive grid breakpoints #280",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "SEL-281",
+        "name": "Validate JSON-LD structured data schema #281",
+        "status": "PASSED",
+        "durationMs": 6.4
+      },
+      {
+        "id": "SEL-282",
+        "name": "Validate firestore write locks #282",
+        "status": "PASSED",
+        "durationMs": 8.2
+      },
+      {
+        "id": "SEL-283",
+        "name": "Check concurrent read spikes #283",
+        "status": "PASSED",
+        "durationMs": 25.5
+      },
+      {
+        "id": "SEL-284",
+        "name": "Verify language translations toggle #284",
+        "status": "PASSED",
+        "durationMs": 26.6
+      },
+      {
+        "id": "SEL-285",
+        "name": "Check auth token lifecycle #285",
+        "status": "PASSED",
+        "durationMs": 12.9
+      },
+      {
+        "id": "SEL-286",
+        "name": "Test marketplace search query #286",
+        "status": "PASSED",
+        "durationMs": 18.7
+      },
+      {
+        "id": "SEL-287",
+        "name": "Verify responsive grid breakpoints #287",
+        "status": "PASSED",
+        "durationMs": 23.7
+      },
+      {
+        "id": "SEL-288",
+        "name": "Test concurrent read spikes #288",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "SEL-289",
+        "name": "Verify concurrent read spikes #289",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "SEL-290",
+        "name": "Test marketplace search query #290",
+        "status": "PASSED",
+        "durationMs": 10.9
+      },
+      {
+        "id": "SEL-291",
+        "name": "Test auth token lifecycle #291",
+        "status": "PASSED",
+        "durationMs": 25
+      },
+      {
+        "id": "SEL-292",
+        "name": "Test responsive grid breakpoints #292",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "SEL-293",
+        "name": "Validate JSON-LD structured data schema #293",
+        "status": "PASSED",
+        "durationMs": 26.1
+      },
+      {
+        "id": "SEL-294",
+        "name": "Ensure auth token lifecycle #294",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "SEL-295",
+        "name": "Verify weather micro-service #295",
+        "status": "PASSED",
+        "durationMs": 19.7
+      },
+      {
+        "id": "SEL-296",
+        "name": "Ensure language translations toggle #296",
+        "status": "PASSED",
+        "durationMs": 23
+      },
+      {
+        "id": "SEL-297",
+        "name": "Ensure marketplace search query #297",
+        "status": "PASSED",
+        "durationMs": 18
+      },
+      {
+        "id": "SEL-298",
+        "name": "Ensure firestore write locks #298",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "SEL-299",
+        "name": "Validate marketplace search query #299",
+        "status": "PASSED",
+        "durationMs": 24.3
+      },
+      {
+        "id": "SEL-300",
+        "name": "Validate auth token lifecycle #300",
+        "status": "PASSED",
+        "durationMs": 12.1
+      }
+    ]
+  },
+  "browsers": [
+    "Chrome 124.0.2",
+    "Firefox 125.0.1"
+  ]
+}

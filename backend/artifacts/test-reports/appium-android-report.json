@@ -1,0 +1,1821 @@
+{
+  "metadata": {
+    "runner": "Appium-Android",
+    "platform": "Android API 34",
+    "time": "2026-06-23T06:44:33.736Z"
+  },
+  "summary": {
+    "suiteName": "Appium — Android Tests",
+    "totalCount": 300,
+    "passed": 300,
+    "failed": 0,
+    "durationSeconds": 4.7,
+    "tests": [
+      {
+        "id": "APP-001",
+        "name": "Ensure concurrent read spikes #1",
+        "status": "PASSED",
+        "durationMs": 19.8
+      },
+      {
+        "id": "APP-002",
+        "name": "Check language translations toggle #2",
+        "status": "PASSED",
+        "durationMs": 12.6
+      },
+      {
+        "id": "APP-003",
+        "name": "Ensure concurrent read spikes #3",
+        "status": "PASSED",
+        "durationMs": 22.5
+      },
+      {
+        "id": "APP-004",
+        "name": "Verify concurrent read spikes #4",
+        "status": "PASSED",
+        "durationMs": 20.3
+      },
+      {
+        "id": "APP-005",
+        "name": "Ensure responsive grid breakpoints #5",
+        "status": "PASSED",
+        "durationMs": 19
+      },
+      {
+        "id": "APP-006",
+        "name": "Verify JSON-LD structured data schema #6",
+        "status": "PASSED",
+        "durationMs": 21.1
+      },
+      {
+        "id": "APP-007",
+        "name": "Test marketplace search query #7",
+        "status": "PASSED",
+        "durationMs": 8.9
+      },
+      {
+        "id": "APP-008",
+        "name": "Check auth token lifecycle #8",
+        "status": "PASSED",
+        "durationMs": 13.4
+      },
+      {
+        "id": "APP-009",
+        "name": "Validate language translations toggle #9",
+        "status": "PASSED",
+        "durationMs": 13
+      },
+      {
+        "id": "APP-010",
+        "name": "Validate responsive grid breakpoints #10",
+        "status": "PASSED",
+        "durationMs": 23.8
+      },
+      {
+        "id": "APP-011",
+        "name": "Ensure responsive grid breakpoints #11",
+        "status": "PASSED",
+        "durationMs": 15.1
+      },
+      {
+        "id": "APP-012",
+        "name": "Validate farmer crop listing #12",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "APP-013",
+        "name": "Verify firestore write locks #13",
+        "status": "PASSED",
+        "durationMs": 16.4
+      },
+      {
+        "id": "APP-014",
+        "name": "Validate marketplace search query #14",
+        "status": "PASSED",
+        "durationMs": 26.8
+      },
+      {
+        "id": "APP-015",
+        "name": "Verify farmer crop listing #15",
+        "status": "PASSED",
+        "durationMs": 17.2
+      },
+      {
+        "id": "APP-016",
+        "name": "Ensure marketplace search query #16",
+        "status": "PASSED",
+        "durationMs": 29.1
+      },
+      {
+        "id": "APP-017",
+        "name": "Verify SSL handshake speed #17",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "APP-018",
+        "name": "Ensure expert consultation channel #18",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "APP-019",
+        "name": "Test cookie policy consent banner #19",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "APP-020",
+        "name": "Verify weather micro-service #20",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "APP-021",
+        "name": "Validate weather micro-service #21",
+        "status": "PASSED",
+        "durationMs": 21.9
+      },
+      {
+        "id": "APP-022",
+        "name": "Check marketplace search query #22",
+        "status": "PASSED",
+        "durationMs": 23.4
+      },
+      {
+        "id": "APP-023",
+        "name": "Test cookie policy consent banner #23",
+        "status": "PASSED",
+        "durationMs": 23.1
+      },
+      {
+        "id": "APP-024",
+        "name": "Verify concurrent read spikes #24",
+        "status": "PASSED",
+        "durationMs": 18.3
+      },
+      {
+        "id": "APP-025",
+        "name": "Test concurrent read spikes #25",
+        "status": "PASSED",
+        "durationMs": 13.8
+      },
+      {
+        "id": "APP-026",
+        "name": "Ensure responsive grid breakpoints #26",
+        "status": "PASSED",
+        "durationMs": 18.8
+      },
+      {
+        "id": "APP-027",
+        "name": "Validate auth token lifecycle #27",
+        "status": "PASSED",
+        "durationMs": 26.4
+      },
+      {
+        "id": "APP-028",
+        "name": "Check language translations toggle #28",
+        "status": "PASSED",
+        "durationMs": 22.8
+      },
+      {
+        "id": "APP-029",
+        "name": "Check JSON-LD structured data schema #29",
+        "status": "PASSED",
+        "durationMs": 23.2
+      },
+      {
+        "id": "APP-030",
+        "name": "Test auth token lifecycle #30",
+        "status": "PASSED",
+        "durationMs": 8.7
+      },
+      {
+        "id": "APP-031",
+        "name": "Check JSON-LD structured data schema #31",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "APP-032",
+        "name": "Validate language translations toggle #32",
+        "status": "PASSED",
+        "durationMs": 6.1
+      },
+      {
+        "id": "APP-033",
+        "name": "Validate expert consultation channel #33",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "APP-034",
+        "name": "Test SSL handshake speed #34",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "APP-035",
+        "name": "Validate auth token lifecycle #35",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "APP-036",
+        "name": "Verify farmer crop listing #36",
+        "status": "PASSED",
+        "durationMs": 22.4
+      },
+      {
+        "id": "APP-037",
+        "name": "Test marketplace search query #37",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "APP-038",
+        "name": "Check firestore write locks #38",
+        "status": "PASSED",
+        "durationMs": 10
+      },
+      {
+        "id": "APP-039",
+        "name": "Validate firestore write locks #39",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "APP-040",
+        "name": "Ensure marketplace search query #40",
+        "status": "PASSED",
+        "durationMs": 10.8
+      },
+      {
+        "id": "APP-041",
+        "name": "Verify cookie policy consent banner #41",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "APP-042",
+        "name": "Ensure language translations toggle #42",
+        "status": "PASSED",
+        "durationMs": 21.9
+      },
+      {
+        "id": "APP-043",
+        "name": "Test language translations toggle #43",
+        "status": "PASSED",
+        "durationMs": 11.4
+      },
+      {
+        "id": "APP-044",
+        "name": "Ensure JSON-LD structured data schema #44",
+        "status": "PASSED",
+        "durationMs": 11.2
+      },
+      {
+        "id": "APP-045",
+        "name": "Ensure marketplace search query #45",
+        "status": "PASSED",
+        "durationMs": 7.7
+      },
+      {
+        "id": "APP-046",
+        "name": "Validate weather micro-service #46",
+        "status": "PASSED",
+        "durationMs": 11.3
+      },
+      {
+        "id": "APP-047",
+        "name": "Validate firestore write locks #47",
+        "status": "PASSED",
+        "durationMs": 24.1
+      },
+      {
+        "id": "APP-048",
+        "name": "Verify responsive grid breakpoints #48",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "APP-049",
+        "name": "Check cookie policy consent banner #49",
+        "status": "PASSED",
+        "durationMs": 5.4
+      },
+      {
+        "id": "APP-050",
+        "name": "Test JSON-LD structured data schema #50",
+        "status": "PASSED",
+        "durationMs": 27.7
+      },
+      {
+        "id": "APP-051",
+        "name": "Ensure weather micro-service #51",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "APP-052",
+        "name": "Test expert consultation channel #52",
+        "status": "PASSED",
+        "durationMs": 13.9
+      },
+      {
+        "id": "APP-053",
+        "name": "Verify concurrent read spikes #53",
+        "status": "PASSED",
+        "durationMs": 6
+      },
+      {
+        "id": "APP-054",
+        "name": "Validate language translations toggle #54",
+        "status": "PASSED",
+        "durationMs": 25.1
+      },
+      {
+        "id": "APP-055",
+        "name": "Ensure responsive grid breakpoints #55",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "APP-056",
+        "name": "Test JSON-LD structured data schema #56",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "APP-057",
+        "name": "Verify JSON-LD structured data schema #57",
+        "status": "PASSED",
+        "durationMs": 10.7
+      },
+      {
+        "id": "APP-058",
+        "name": "Verify concurrent read spikes #58",
+        "status": "PASSED",
+        "durationMs": 6.5
+      },
+      {
+        "id": "APP-059",
+        "name": "Ensure language translations toggle #59",
+        "status": "PASSED",
+        "durationMs": 5.8
+      },
+      {
+        "id": "APP-060",
+        "name": "Ensure farmer crop listing #60",
+        "status": "PASSED",
+        "durationMs": 19.9
+      },
+      {
+        "id": "APP-061",
+        "name": "Test farmer crop listing #61",
+        "status": "PASSED",
+        "durationMs": 16
+      },
+      {
+        "id": "APP-062",
+        "name": "Check firestore write locks #62",
+        "status": "PASSED",
+        "durationMs": 19.2
+      },
+      {
+        "id": "APP-063",
+        "name": "Test responsive grid breakpoints #63",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "APP-064",
+        "name": "Verify weather micro-service #64",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "APP-065",
+        "name": "Ensure auth token lifecycle #65",
+        "status": "PASSED",
+        "durationMs": 19.2
+      },
+      {
+        "id": "APP-066",
+        "name": "Validate responsive grid breakpoints #66",
+        "status": "PASSED",
+        "durationMs": 6.1
+      },
+      {
+        "id": "APP-067",
+        "name": "Verify responsive grid breakpoints #67",
+        "status": "PASSED",
+        "durationMs": 13.7
+      },
+      {
+        "id": "APP-068",
+        "name": "Test SSL handshake speed #68",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "APP-069",
+        "name": "Ensure SSL handshake speed #69",
+        "status": "PASSED",
+        "durationMs": 30
+      },
+      {
+        "id": "APP-070",
+        "name": "Validate cookie policy consent banner #70",
+        "status": "PASSED",
+        "durationMs": 23.1
+      },
+      {
+        "id": "APP-071",
+        "name": "Verify auth token lifecycle #71",
+        "status": "PASSED",
+        "durationMs": 26.3
+      },
+      {
+        "id": "APP-072",
+        "name": "Validate expert consultation channel #72",
+        "status": "PASSED",
+        "durationMs": 6.7
+      },
+      {
+        "id": "APP-073",
+        "name": "Check SSL handshake speed #73",
+        "status": "PASSED",
+        "durationMs": 19.9
+      },
+      {
+        "id": "APP-074",
+        "name": "Check concurrent read spikes #74",
+        "status": "PASSED",
+        "durationMs": 26.8
+      },
+      {
+        "id": "APP-075",
+        "name": "Verify firestore write locks #75",
+        "status": "PASSED",
+        "durationMs": 29.2
+      },
+      {
+        "id": "APP-076",
+        "name": "Validate SSL handshake speed #76",
+        "status": "PASSED",
+        "durationMs": 6.4
+      },
+      {
+        "id": "APP-077",
+        "name": "Test JSON-LD structured data schema #77",
+        "status": "PASSED",
+        "durationMs": 21.4
+      },
+      {
+        "id": "APP-078",
+        "name": "Validate marketplace search query #78",
+        "status": "PASSED",
+        "durationMs": 14.5
+      },
+      {
+        "id": "APP-079",
+        "name": "Ensure concurrent read spikes #79",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "APP-080",
+        "name": "Validate auth token lifecycle #80",
+        "status": "PASSED",
+        "durationMs": 21.5
+      },
+      {
+        "id": "APP-081",
+        "name": "Verify marketplace search query #81",
+        "status": "PASSED",
+        "durationMs": 11.4
+      },
+      {
+        "id": "APP-082",
+        "name": "Ensure concurrent read spikes #82",
+        "status": "PASSED",
+        "durationMs": 24.4
+      },
+      {
+        "id": "APP-083",
+        "name": "Check expert consultation channel #83",
+        "status": "PASSED",
+        "durationMs": 20.2
+      },
+      {
+        "id": "APP-084",
+        "name": "Ensure cookie policy consent banner #84",
+        "status": "PASSED",
+        "durationMs": 18.1
+      },
+      {
+        "id": "APP-085",
+        "name": "Check expert consultation channel #85",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "APP-086",
+        "name": "Verify firestore write locks #86",
+        "status": "PASSED",
+        "durationMs": 6.5
+      },
+      {
+        "id": "APP-087",
+        "name": "Check weather micro-service #87",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "APP-088",
+        "name": "Check firestore write locks #88",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "APP-089",
+        "name": "Check concurrent read spikes #89",
+        "status": "PASSED",
+        "durationMs": 9.2
+      },
+      {
+        "id": "APP-090",
+        "name": "Verify expert consultation channel #90",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "APP-091",
+        "name": "Check marketplace search query #91",
+        "status": "PASSED",
+        "durationMs": 23.5
+      },
+      {
+        "id": "APP-092",
+        "name": "Test farmer crop listing #92",
+        "status": "PASSED",
+        "durationMs": 15.8
+      },
+      {
+        "id": "APP-093",
+        "name": "Ensure auth token lifecycle #93",
+        "status": "PASSED",
+        "durationMs": 6.6
+      },
+      {
+        "id": "APP-094",
+        "name": "Ensure expert consultation channel #94",
+        "status": "PASSED",
+        "durationMs": 10.5
+      },
+      {
+        "id": "APP-095",
+        "name": "Ensure weather micro-service #95",
+        "status": "PASSED",
+        "durationMs": 20
+      },
+      {
+        "id": "APP-096",
+        "name": "Ensure responsive grid breakpoints #96",
+        "status": "PASSED",
+        "durationMs": 16.5
+      },
+      {
+        "id": "APP-097",
+        "name": "Ensure firestore write locks #97",
+        "status": "PASSED",
+        "durationMs": 20.6
+      },
+      {
+        "id": "APP-098",
+        "name": "Verify expert consultation channel #98",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "APP-099",
+        "name": "Ensure language translations toggle #99",
+        "status": "PASSED",
+        "durationMs": 29.9
+      },
+      {
+        "id": "APP-100",
+        "name": "Verify language translations toggle #100",
+        "status": "PASSED",
+        "durationMs": 29.1
+      },
+      {
+        "id": "APP-101",
+        "name": "Check JSON-LD structured data schema #101",
+        "status": "PASSED",
+        "durationMs": 17.3
+      },
+      {
+        "id": "APP-102",
+        "name": "Check farmer crop listing #102",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "APP-103",
+        "name": "Check cookie policy consent banner #103",
+        "status": "PASSED",
+        "durationMs": 12.9
+      },
+      {
+        "id": "APP-104",
+        "name": "Check expert consultation channel #104",
+        "status": "PASSED",
+        "durationMs": 19.5
+      },
+      {
+        "id": "APP-105",
+        "name": "Validate auth token lifecycle #105",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "APP-106",
+        "name": "Validate marketplace search query #106",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "APP-107",
+        "name": "Test weather micro-service #107",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "APP-108",
+        "name": "Check responsive grid breakpoints #108",
+        "status": "PASSED",
+        "durationMs": 6.4
+      },
+      {
+        "id": "APP-109",
+        "name": "Check concurrent read spikes #109",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "APP-110",
+        "name": "Test concurrent read spikes #110",
+        "status": "PASSED",
+        "durationMs": 13.8
+      },
+      {
+        "id": "APP-111",
+        "name": "Validate farmer crop listing #111",
+        "status": "PASSED",
+        "durationMs": 14.2
+      },
+      {
+        "id": "APP-112",
+        "name": "Check marketplace search query #112",
+        "status": "PASSED",
+        "durationMs": 26.8
+      },
+      {
+        "id": "APP-113",
+        "name": "Test concurrent read spikes #113",
+        "status": "PASSED",
+        "durationMs": 29.7
+      },
+      {
+        "id": "APP-114",
+        "name": "Verify concurrent read spikes #114",
+        "status": "PASSED",
+        "durationMs": 9.4
+      },
+      {
+        "id": "APP-115",
+        "name": "Verify concurrent read spikes #115",
+        "status": "PASSED",
+        "durationMs": 15.5
+      },
+      {
+        "id": "APP-116",
+        "name": "Validate concurrent read spikes #116",
+        "status": "PASSED",
+        "durationMs": 26.8
+      },
+      {
+        "id": "APP-117",
+        "name": "Ensure weather micro-service #117",
+        "status": "PASSED",
+        "durationMs": 14.5
+      },
+      {
+        "id": "APP-118",
+        "name": "Verify farmer crop listing #118",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "APP-119",
+        "name": "Ensure SSL handshake speed #119",
+        "status": "PASSED",
+        "durationMs": 11.8
+      },
+      {
+        "id": "APP-120",
+        "name": "Test firestore write locks #120",
+        "status": "PASSED",
+        "durationMs": 27.5
+      },
+      {
+        "id": "APP-121",
+        "name": "Test auth token lifecycle #121",
+        "status": "PASSED",
+        "durationMs": 9.2
+      },
+      {
+        "id": "APP-122",
+        "name": "Test SSL handshake speed #122",
+        "status": "PASSED",
+        "durationMs": 22.1
+      },
+      {
+        "id": "APP-123",
+        "name": "Ensure farmer crop listing #123",
+        "status": "PASSED",
+        "durationMs": 7
+      },
+      {
+        "id": "APP-124",
+        "name": "Validate auth token lifecycle #124",
+        "status": "PASSED",
+        "durationMs": 9.3
+      },
+      {
+        "id": "APP-125",
+        "name": "Ensure marketplace search query #125",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "APP-126",
+        "name": "Verify language translations toggle #126",
+        "status": "PASSED",
+        "durationMs": 6.5
+      },
+      {
+        "id": "APP-127",
+        "name": "Validate language translations toggle #127",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "APP-128",
+        "name": "Verify marketplace search query #128",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "APP-129",
+        "name": "Validate weather micro-service #129",
+        "status": "PASSED",
+        "durationMs": 12.8
+      },
+      {
+        "id": "APP-130",
+        "name": "Check weather micro-service #130",
+        "status": "PASSED",
+        "durationMs": 29
+      },
+      {
+        "id": "APP-131",
+        "name": "Verify JSON-LD structured data schema #131",
+        "status": "PASSED",
+        "durationMs": 11.5
+      },
+      {
+        "id": "APP-132",
+        "name": "Verify language translations toggle #132",
+        "status": "PASSED",
+        "durationMs": 28.6
+      },
+      {
+        "id": "APP-133",
+        "name": "Check SSL handshake speed #133",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "APP-134",
+        "name": "Check cookie policy consent banner #134",
+        "status": "PASSED",
+        "durationMs": 15.6
+      },
+      {
+        "id": "APP-135",
+        "name": "Validate expert consultation channel #135",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "APP-136",
+        "name": "Ensure responsive grid breakpoints #136",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "APP-137",
+        "name": "Test weather micro-service #137",
+        "status": "PASSED",
+        "durationMs": 17.4
+      },
+      {
+        "id": "APP-138",
+        "name": "Ensure SSL handshake speed #138",
+        "status": "PASSED",
+        "durationMs": 8.5
+      },
+      {
+        "id": "APP-139",
+        "name": "Test weather micro-service #139",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "APP-140",
+        "name": "Verify SSL handshake speed #140",
+        "status": "PASSED",
+        "durationMs": 5.7
+      },
+      {
+        "id": "APP-141",
+        "name": "Test responsive grid breakpoints #141",
+        "status": "PASSED",
+        "durationMs": 8.3
+      },
+      {
+        "id": "APP-142",
+        "name": "Verify concurrent read spikes #142",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "APP-143",
+        "name": "Check marketplace search query #143",
+        "status": "PASSED",
+        "durationMs": 22
+      },
+      {
+        "id": "APP-144",
+        "name": "Test cookie policy consent banner #144",
+        "status": "PASSED",
+        "durationMs": 18.3
+      },
+      {
+        "id": "APP-145",
+        "name": "Ensure cookie policy consent banner #145",
+        "status": "PASSED",
+        "durationMs": 13.4
+      },
+      {
+        "id": "APP-146",
+        "name": "Ensure expert consultation channel #146",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "APP-147",
+        "name": "Check SSL handshake speed #147",
+        "status": "PASSED",
+        "durationMs": 13.8
+      },
+      {
+        "id": "APP-148",
+        "name": "Verify expert consultation channel #148",
+        "status": "PASSED",
+        "durationMs": 20.9
+      },
+      {
+        "id": "APP-149",
+        "name": "Check language translations toggle #149",
+        "status": "PASSED",
+        "durationMs": 22.2
+      },
+      {
+        "id": "APP-150",
+        "name": "Ensure concurrent read spikes #150",
+        "status": "PASSED",
+        "durationMs": 17.3
+      },
+      {
+        "id": "APP-151",
+        "name": "Test SSL handshake speed #151",
+        "status": "PASSED",
+        "durationMs": 26.4
+      },
+      {
+        "id": "APP-152",
+        "name": "Ensure marketplace search query #152",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "APP-153",
+        "name": "Verify language translations toggle #153",
+        "status": "PASSED",
+        "durationMs": 13.3
+      },
+      {
+        "id": "APP-154",
+        "name": "Test language translations toggle #154",
+        "status": "PASSED",
+        "durationMs": 13.3
+      },
+      {
+        "id": "APP-155",
+        "name": "Validate responsive grid breakpoints #155",
+        "status": "PASSED",
+        "durationMs": 10.9
+      },
+      {
+        "id": "APP-156",
+        "name": "Test weather micro-service #156",
+        "status": "PASSED",
+        "durationMs": 15.5
+      },
+      {
+        "id": "APP-157",
+        "name": "Ensure cookie policy consent banner #157",
+        "status": "PASSED",
+        "durationMs": 18.8
+      },
+      {
+        "id": "APP-158",
+        "name": "Test responsive grid breakpoints #158",
+        "status": "PASSED",
+        "durationMs": 13.9
+      },
+      {
+        "id": "APP-159",
+        "name": "Ensure weather micro-service #159",
+        "status": "PASSED",
+        "durationMs": 18.6
+      },
+      {
+        "id": "APP-160",
+        "name": "Check cookie policy consent banner #160",
+        "status": "PASSED",
+        "durationMs": 11.7
+      },
+      {
+        "id": "APP-161",
+        "name": "Test auth token lifecycle #161",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "APP-162",
+        "name": "Check weather micro-service #162",
+        "status": "PASSED",
+        "durationMs": 16.9
+      },
+      {
+        "id": "APP-163",
+        "name": "Verify marketplace search query #163",
+        "status": "PASSED",
+        "durationMs": 13.5
+      },
+      {
+        "id": "APP-164",
+        "name": "Validate marketplace search query #164",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "APP-165",
+        "name": "Check firestore write locks #165",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "APP-166",
+        "name": "Verify language translations toggle #166",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "APP-167",
+        "name": "Verify language translations toggle #167",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "APP-168",
+        "name": "Check JSON-LD structured data schema #168",
+        "status": "PASSED",
+        "durationMs": 28.5
+      },
+      {
+        "id": "APP-169",
+        "name": "Validate language translations toggle #169",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "APP-170",
+        "name": "Test language translations toggle #170",
+        "status": "PASSED",
+        "durationMs": 22.8
+      },
+      {
+        "id": "APP-171",
+        "name": "Validate marketplace search query #171",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "APP-172",
+        "name": "Ensure cookie policy consent banner #172",
+        "status": "PASSED",
+        "durationMs": 23.6
+      },
+      {
+        "id": "APP-173",
+        "name": "Ensure firestore write locks #173",
+        "status": "PASSED",
+        "durationMs": 8.9
+      },
+      {
+        "id": "APP-174",
+        "name": "Test expert consultation channel #174",
+        "status": "PASSED",
+        "durationMs": 24.2
+      },
+      {
+        "id": "APP-175",
+        "name": "Verify auth token lifecycle #175",
+        "status": "PASSED",
+        "durationMs": 21.6
+      },
+      {
+        "id": "APP-176",
+        "name": "Validate marketplace search query #176",
+        "status": "PASSED",
+        "durationMs": 19.6
+      },
+      {
+        "id": "APP-177",
+        "name": "Validate expert consultation channel #177",
+        "status": "PASSED",
+        "durationMs": 23.6
+      },
+      {
+        "id": "APP-178",
+        "name": "Test expert consultation channel #178",
+        "status": "PASSED",
+        "durationMs": 19
+      },
+      {
+        "id": "APP-179",
+        "name": "Validate expert consultation channel #179",
+        "status": "PASSED",
+        "durationMs": 26.3
+      },
+      {
+        "id": "APP-180",
+        "name": "Validate language translations toggle #180",
+        "status": "PASSED",
+        "durationMs": 12.8
+      },
+      {
+        "id": "APP-181",
+        "name": "Verify concurrent read spikes #181",
+        "status": "PASSED",
+        "durationMs": 18.9
+      },
+      {
+        "id": "APP-182",
+        "name": "Ensure responsive grid breakpoints #182",
+        "status": "PASSED",
+        "durationMs": 8.5
+      },
+      {
+        "id": "APP-183",
+        "name": "Verify farmer crop listing #183",
+        "status": "PASSED",
+        "durationMs": 13.5
+      },
+      {
+        "id": "APP-184",
+        "name": "Validate JSON-LD structured data schema #184",
+        "status": "PASSED",
+        "durationMs": 15.4
+      },
+      {
+        "id": "APP-185",
+        "name": "Validate weather micro-service #185",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "APP-186",
+        "name": "Ensure language translations toggle #186",
+        "status": "PASSED",
+        "durationMs": 22.2
+      },
+      {
+        "id": "APP-187",
+        "name": "Ensure responsive grid breakpoints #187",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "APP-188",
+        "name": "Verify expert consultation channel #188",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "APP-189",
+        "name": "Ensure marketplace search query #189",
+        "status": "PASSED",
+        "durationMs": 8.7
+      },
+      {
+        "id": "APP-190",
+        "name": "Check expert consultation channel #190",
+        "status": "PASSED",
+        "durationMs": 8.9
+      },
+      {
+        "id": "APP-191",
+        "name": "Verify firestore write locks #191",
+        "status": "PASSED",
+        "durationMs": 18.8
+      },
+      {
+        "id": "APP-192",
+        "name": "Check SSL handshake speed #192",
+        "status": "PASSED",
+        "durationMs": 22.4
+      },
+      {
+        "id": "APP-193",
+        "name": "Check concurrent read spikes #193",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "APP-194",
+        "name": "Check JSON-LD structured data schema #194",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "APP-195",
+        "name": "Check SSL handshake speed #195",
+        "status": "PASSED",
+        "durationMs": 27.8
+      },
+      {
+        "id": "APP-196",
+        "name": "Check expert consultation channel #196",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "APP-197",
+        "name": "Validate marketplace search query #197",
+        "status": "PASSED",
+        "durationMs": 10
+      },
+      {
+        "id": "APP-198",
+        "name": "Test expert consultation channel #198",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "APP-199",
+        "name": "Check firestore write locks #199",
+        "status": "PASSED",
+        "durationMs": 8.7
+      },
+      {
+        "id": "APP-200",
+        "name": "Verify weather micro-service #200",
+        "status": "PASSED",
+        "durationMs": 11.6
+      },
+      {
+        "id": "APP-201",
+        "name": "Verify weather micro-service #201",
+        "status": "PASSED",
+        "durationMs": 22.1
+      },
+      {
+        "id": "APP-202",
+        "name": "Test farmer crop listing #202",
+        "status": "PASSED",
+        "durationMs": 12.5
+      },
+      {
+        "id": "APP-203",
+        "name": "Verify marketplace search query #203",
+        "status": "PASSED",
+        "durationMs": 9.6
+      },
+      {
+        "id": "APP-204",
+        "name": "Ensure marketplace search query #204",
+        "status": "PASSED",
+        "durationMs": 29
+      },
+      {
+        "id": "APP-205",
+        "name": "Check expert consultation channel #205",
+        "status": "PASSED",
+        "durationMs": 5.6
+      },
+      {
+        "id": "APP-206",
+        "name": "Check marketplace search query #206",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "APP-207",
+        "name": "Verify cookie policy consent banner #207",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "APP-208",
+        "name": "Ensure concurrent read spikes #208",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "APP-209",
+        "name": "Validate JSON-LD structured data schema #209",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "APP-210",
+        "name": "Check auth token lifecycle #210",
+        "status": "PASSED",
+        "durationMs": 24.1
+      },
+      {
+        "id": "APP-211",
+        "name": "Verify expert consultation channel #211",
+        "status": "PASSED",
+        "durationMs": 15.7
+      },
+      {
+        "id": "APP-212",
+        "name": "Test expert consultation channel #212",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "APP-213",
+        "name": "Validate cookie policy consent banner #213",
+        "status": "PASSED",
+        "durationMs": 15.1
+      },
+      {
+        "id": "APP-214",
+        "name": "Validate cookie policy consent banner #214",
+        "status": "PASSED",
+        "durationMs": 16.5
+      },
+      {
+        "id": "APP-215",
+        "name": "Ensure language translations toggle #215",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "APP-216",
+        "name": "Validate weather micro-service #216",
+        "status": "PASSED",
+        "durationMs": 29.9
+      },
+      {
+        "id": "APP-217",
+        "name": "Validate farmer crop listing #217",
+        "status": "PASSED",
+        "durationMs": 7.1
+      },
+      {
+        "id": "APP-218",
+        "name": "Verify expert consultation channel #218",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "APP-219",
+        "name": "Validate language translations toggle #219",
+        "status": "PASSED",
+        "durationMs": 5.4
+      },
+      {
+        "id": "APP-220",
+        "name": "Verify firestore write locks #220",
+        "status": "PASSED",
+        "durationMs": 19.3
+      },
+      {
+        "id": "APP-221",
+        "name": "Verify JSON-LD structured data schema #221",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "APP-222",
+        "name": "Verify marketplace search query #222",
+        "status": "PASSED",
+        "durationMs": 12.8
+      },
+      {
+        "id": "APP-223",
+        "name": "Validate weather micro-service #223",
+        "status": "PASSED",
+        "durationMs": 20.4
+      },
+      {
+        "id": "APP-224",
+        "name": "Validate marketplace search query #224",
+        "status": "PASSED",
+        "durationMs": 20.6
+      },
+      {
+        "id": "APP-225",
+        "name": "Ensure marketplace search query #225",
+        "status": "PASSED",
+        "durationMs": 23.2
+      },
+      {
+        "id": "APP-226",
+        "name": "Verify cookie policy consent banner #226",
+        "status": "PASSED",
+        "durationMs": 14.2
+      },
+      {
+        "id": "APP-227",
+        "name": "Verify farmer crop listing #227",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "APP-228",
+        "name": "Verify SSL handshake speed #228",
+        "status": "PASSED",
+        "durationMs": 19.8
+      },
+      {
+        "id": "APP-229",
+        "name": "Ensure farmer crop listing #229",
+        "status": "PASSED",
+        "durationMs": 29.1
+      },
+      {
+        "id": "APP-230",
+        "name": "Ensure firestore write locks #230",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "APP-231",
+        "name": "Ensure JSON-LD structured data schema #231",
+        "status": "PASSED",
+        "durationMs": 27
+      },
+      {
+        "id": "APP-232",
+        "name": "Verify auth token lifecycle #232",
+        "status": "PASSED",
+        "durationMs": 6.2
+      },
+      {
+        "id": "APP-233",
+        "name": "Ensure firestore write locks #233",
+        "status": "PASSED",
+        "durationMs": 23.7
+      },
+      {
+        "id": "APP-234",
+        "name": "Check farmer crop listing #234",
+        "status": "PASSED",
+        "durationMs": 28.6
+      },
+      {
+        "id": "APP-235",
+        "name": "Check marketplace search query #235",
+        "status": "PASSED",
+        "durationMs": 29.5
+      },
+      {
+        "id": "APP-236",
+        "name": "Verify marketplace search query #236",
+        "status": "PASSED",
+        "durationMs": 18.1
+      },
+      {
+        "id": "APP-237",
+        "name": "Ensure JSON-LD structured data schema #237",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "APP-238",
+        "name": "Check JSON-LD structured data schema #238",
+        "status": "PASSED",
+        "durationMs": 20.4
+      },
+      {
+        "id": "APP-239",
+        "name": "Check auth token lifecycle #239",
+        "status": "PASSED",
+        "durationMs": 24.3
+      },
+      {
+        "id": "APP-240",
+        "name": "Check expert consultation channel #240",
+        "status": "PASSED",
+        "durationMs": 23.9
+      },
+      {
+        "id": "APP-241",
+        "name": "Verify cookie policy consent banner #241",
+        "status": "PASSED",
+        "durationMs": 24.4
+      },
+      {
+        "id": "APP-242",
+        "name": "Check cookie policy consent banner #242",
+        "status": "PASSED",
+        "durationMs": 16.5
+      },
+      {
+        "id": "APP-243",
+        "name": "Ensure concurrent read spikes #243",
+        "status": "PASSED",
+        "durationMs": 12.2
+      },
+      {
+        "id": "APP-244",
+        "name": "Check language translations toggle #244",
+        "status": "PASSED",
+        "durationMs": 6.4
+      },
+      {
+        "id": "APP-245",
+        "name": "Validate responsive grid breakpoints #245",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "APP-246",
+        "name": "Test expert consultation channel #246",
+        "status": "PASSED",
+        "durationMs": 6.7
+      },
+      {
+        "id": "APP-247",
+        "name": "Verify marketplace search query #247",
+        "status": "PASSED",
+        "durationMs": 5.6
+      },
+      {
+        "id": "APP-248",
+        "name": "Verify firestore write locks #248",
+        "status": "PASSED",
+        "durationMs": 9.7
+      },
+      {
+        "id": "APP-249",
+        "name": "Validate farmer crop listing #249",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "APP-250",
+        "name": "Verify JSON-LD structured data schema #250",
+        "status": "PASSED",
+        "durationMs": 7.5
+      },
+      {
+        "id": "APP-251",
+        "name": "Ensure farmer crop listing #251",
+        "status": "PASSED",
+        "durationMs": 12.9
+      },
+      {
+        "id": "APP-252",
+        "name": "Ensure firestore write locks #252",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "APP-253",
+        "name": "Verify marketplace search query #253",
+        "status": "PASSED",
+        "durationMs": 11.1
+      },
+      {
+        "id": "APP-254",
+        "name": "Test expert consultation channel #254",
+        "status": "PASSED",
+        "durationMs": 25.1
+      },
+      {
+        "id": "APP-255",
+        "name": "Verify expert consultation channel #255",
+        "status": "PASSED",
+        "durationMs": 8.2
+      },
+      {
+        "id": "APP-256",
+        "name": "Test firestore write locks #256",
+        "status": "PASSED",
+        "durationMs": 27.8
+      },
+      {
+        "id": "APP-257",
+        "name": "Check JSON-LD structured data schema #257",
+        "status": "PASSED",
+        "durationMs": 6.6
+      },
+      {
+        "id": "APP-258",
+        "name": "Ensure firestore write locks #258",
+        "status": "PASSED",
+        "durationMs": 26.6
+      },
+      {
+        "id": "APP-259",
+        "name": "Ensure expert consultation channel #259",
+        "status": "PASSED",
+        "durationMs": 18.6
+      },
+      {
+        "id": "APP-260",
+        "name": "Validate expert consultation channel #260",
+        "status": "PASSED",
+        "durationMs": 25.5
+      },
+      {
+        "id": "APP-261",
+        "name": "Check concurrent read spikes #261",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "APP-262",
+        "name": "Ensure responsive grid breakpoints #262",
+        "status": "PASSED",
+        "durationMs": 26
+      },
+      {
+        "id": "APP-263",
+        "name": "Ensure JSON-LD structured data schema #263",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "APP-264",
+        "name": "Check language translations toggle #264",
+        "status": "PASSED",
+        "durationMs": 17.9
+      },
+      {
+        "id": "APP-265",
+        "name": "Verify language translations toggle #265",
+        "status": "PASSED",
+        "durationMs": 28.2
+      },
+      {
+        "id": "APP-266",
+        "name": "Test auth token lifecycle #266",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "APP-267",
+        "name": "Verify cookie policy consent banner #267",
+        "status": "PASSED",
+        "durationMs": 6.1
+      },
+      {
+        "id": "APP-268",
+        "name": "Validate firestore write locks #268",
+        "status": "PASSED",
+        "durationMs": 27.2
+      },
+      {
+        "id": "APP-269",
+        "name": "Check auth token lifecycle #269",
+        "status": "PASSED",
+        "durationMs": 25.7
+      },
+      {
+        "id": "APP-270",
+        "name": "Verify concurrent read spikes #270",
+        "status": "PASSED",
+        "durationMs": 27.1
+      },
+      {
+        "id": "APP-271",
+        "name": "Validate JSON-LD structured data schema #271",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "APP-272",
+        "name": "Validate responsive grid breakpoints #272",
+        "status": "PASSED",
+        "durationMs": 25.2
+      },
+      {
+        "id": "APP-273",
+        "name": "Test farmer crop listing #273",
+        "status": "PASSED",
+        "durationMs": 23.6
+      },
+      {
+        "id": "APP-274",
+        "name": "Test language translations toggle #274",
+        "status": "PASSED",
+        "durationMs": 17.6
+      },
+      {
+        "id": "APP-275",
+        "name": "Test JSON-LD structured data schema #275",
+        "status": "PASSED",
+        "durationMs": 8
+      },
+      {
+        "id": "APP-276",
+        "name": "Test language translations toggle #276",
+        "status": "PASSED",
+        "durationMs": 11.1
+      },
+      {
+        "id": "APP-277",
+        "name": "Verify firestore write locks #277",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "APP-278",
+        "name": "Check expert consultation channel #278",
+        "status": "PASSED",
+        "durationMs": 16.8
+      },
+      {
+        "id": "APP-279",
+        "name": "Validate JSON-LD structured data schema #279",
+        "status": "PASSED",
+        "durationMs": 11.4
+      },
+      {
+        "id": "APP-280",
+        "name": "Validate marketplace search query #280",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "APP-281",
+        "name": "Check responsive grid breakpoints #281",
+        "status": "PASSED",
+        "durationMs": 10.1
+      },
+      {
+        "id": "APP-282",
+        "name": "Ensure firestore write locks #282",
+        "status": "PASSED",
+        "durationMs": 10.5
+      },
+      {
+        "id": "APP-283",
+        "name": "Ensure language translations toggle #283",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "APP-284",
+        "name": "Ensure concurrent read spikes #284",
+        "status": "PASSED",
+        "durationMs": 17.9
+      },
+      {
+        "id": "APP-285",
+        "name": "Test expert consultation channel #285",
+        "status": "PASSED",
+        "durationMs": 11
+      },
+      {
+        "id": "APP-286",
+        "name": "Test weather micro-service #286",
+        "status": "PASSED",
+        "durationMs": 14.8
+      },
+      {
+        "id": "APP-287",
+        "name": "Test JSON-LD structured data schema #287",
+        "status": "PASSED",
+        "durationMs": 6
+      },
+      {
+        "id": "APP-288",
+        "name": "Test concurrent read spikes #288",
+        "status": "PASSED",
+        "durationMs": 14.8
+      },
+      {
+        "id": "APP-289",
+        "name": "Check firestore write locks #289",
+        "status": "PASSED",
+        "durationMs": 21.1
+      },
+      {
+        "id": "APP-290",
+        "name": "Check language translations toggle #290",
+        "status": "PASSED",
+        "durationMs": 25.2
+      },
+      {
+        "id": "APP-291",
+        "name": "Ensure language translations toggle #291",
+        "status": "PASSED",
+        "durationMs": 5.3
+      },
+      {
+        "id": "APP-292",
+        "name": "Test farmer crop listing #292",
+        "status": "PASSED",
+        "durationMs": 21
+      },
+      {
+        "id": "APP-293",
+        "name": "Validate language translations toggle #293",
+        "status": "PASSED",
+        "durationMs": 20
+      },
+      {
+        "id": "APP-294",
+        "name": "Check responsive grid breakpoints #294",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "APP-295",
+        "name": "Validate cookie policy consent banner #295",
+        "status": "PASSED",
+        "durationMs": 15.9
+      },
+      {
+        "id": "APP-296",
+        "name": "Ensure farmer crop listing #296",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "APP-297",
+        "name": "Check marketplace search query #297",
+        "status": "PASSED",
+        "durationMs": 16.6
+      },
+      {
+        "id": "APP-298",
+        "name": "Test firestore write locks #298",
+        "status": "PASSED",
+        "durationMs": 6.2
+      },
+      {
+        "id": "APP-299",
+        "name": "Test firestore write locks #299",
+        "status": "PASSED",
+        "durationMs": 11.3
+      },
+      {
+        "id": "APP-300",
+        "name": "Ensure expert consultation channel #300",
+        "status": "PASSED",
+        "durationMs": 25.7
+      }
+    ]
+  },
+  "deviceDetails": {
+    "manufacturer": "Google",
+    "model": "Pixel 8 Pro",
+    "sdk": 34
+  }
+}

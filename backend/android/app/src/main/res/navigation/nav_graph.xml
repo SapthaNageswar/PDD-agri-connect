@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment android:id="@+id/landingFragment"
+        android:name="com.agriconnect.app.LandingFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_landing">
+        <action android:id="@+id/action_landing_to_auth"
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment android:id="@+id/authFragment"
+        android:name="com.agriconnect.app.AuthFragment"
+        android:label="Sign In"
+        tools:layout="@layout/fragment_auth">
+        <argument android:name="authType"
+            app:argType="string"
+            android:defaultValue="login"/>
+        <action android:id="@+id/action_auth_to_farmer"
+            app:destination="@id/farmerDashboardFragment"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_auth_to_buyer"
+            app:destination="@id/buyerDashboardFragment"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_auth_to_admin"
+            app:destination="@id/adminDashboardFragment"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/farmerDashboardFragment"
+        android:name="com.agriconnect.app.FarmerDashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_farmer_dashboard">
+        <action android:id="@+id/action_farmer_to_advisory"
+            app:destination="@id/advisoryFragment"/>
+        <action android:id="@+id/action_farmer_to_marketplace"
+            app:destination="@id/marketplaceFragment"/>
+        <action android:id="@+id/action_farmer_to_weather"
+            app:destination="@id/weatherFragment"/>
+        <action android:id="@+id/action_farmer_to_prices"
+            app:destination="@id/priceIntelligenceFragment"/>
+        <action android:id="@+id/action_farmer_to_notifications"
+            app:destination="@id/notificationsFragment"/>
+        <action android:id="@+id/action_farmer_logout"
+            app:destination="@id/landingFragment"
+            app:popUpTo="@id/farmerDashboardFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/buyerDashboardFragment"
+        android:name="com.agriconnect.app.BuyerDashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_buyer_dashboard">
+        <action android:id="@+id/action_buyer_to_marketplace"
+            app:destination="@id/marketplaceFragment"/>
+        <action android:id="@+id/action_buyer_to_notifications"
+            app:destination="@id/notificationsFragment"/>
+        <action android:id="@+id/action_buyer_logout"
+            app:destination="@id/landingFragment"
+            app:popUpTo="@id/buyerDashboardFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/adminDashboardFragment"
+        android:name="com.agriconnect.app.AdminDashboardFragment"
+        android:label="Admin"
+        tools:layout="@layout/fragment_admin_dashboard">
+        <action android:id="@+id/action_admin_logout"
+            app:destination="@id/landingFragment"
+            app:popUpTo="@id/adminDashboardFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment android:id="@+id/marketplaceFragment"
+        android:name="com.agriconnect.app.MarketplaceFragment"
+        android:label="Marketplace"
+        tools:layout="@layout/fragment_marketplace">
+        <action android:id="@+id/action_marketplace_to_product"
+            app:destination="@id/productDetailFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/productDetailFragment"
+        android:name="com.agriconnect.app.ProductDetailFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_detail">
+        <argument android:name="productId"
+            app:argType="string"
+            android:defaultValue="1"/>
+    </fragment>
+
+    <fragment android:id="@+id/advisoryFragment"
+        android:name="com.agriconnect.app.AdvisoryFragment"
+        android:label="AI Advisory"
+        tools:layout="@layout/fragment_advisory"/>
+
+    <fragment android:id="@+id/weatherFragment"
+        android:name="com.agriconnect.app.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather"/>
+
+    <fragment android:id="@+id/expertsFragment"
+        android:name="com.agriconnect.app.ExpertsFragment"
+        android:label="Experts"
+        tools:layout="@layout/fragment_experts"/>
+
+    <fragment android:id="@+id/priceIntelligenceFragment"
+        android:name="com.agriconnect.app.PriceIntelligenceFragment"
+        android:label="Price Intelligence"
+        tools:layout="@layout/fragment_price_intelligence"/>
+
+    <fragment android:id="@+id/notificationsFragment"
+        android:name="com.agriconnect.app.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications"/>
+
+</navigation>

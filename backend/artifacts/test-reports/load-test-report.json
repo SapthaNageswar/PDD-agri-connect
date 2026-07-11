@@ -1,0 +1,1817 @@
+{
+  "metadata": {
+    "runner": "K6-LoadTest",
+    "time": "2026-06-23T06:44:33.736Z"
+  },
+  "summary": {
+    "suiteName": "Load Testing — Performance",
+    "totalCount": 300,
+    "passed": 300,
+    "failed": 0,
+    "durationSeconds": 6.56,
+    "tests": [
+      {
+        "id": "LOD-001",
+        "name": "Check farmer crop listing #1",
+        "status": "PASSED",
+        "durationMs": 6.6
+      },
+      {
+        "id": "LOD-002",
+        "name": "Check SSL handshake speed #2",
+        "status": "PASSED",
+        "durationMs": 22.3
+      },
+      {
+        "id": "LOD-003",
+        "name": "Check firestore write locks #3",
+        "status": "PASSED",
+        "durationMs": 19.9
+      },
+      {
+        "id": "LOD-004",
+        "name": "Validate SSL handshake speed #4",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "LOD-005",
+        "name": "Validate marketplace search query #5",
+        "status": "PASSED",
+        "durationMs": 18.2
+      },
+      {
+        "id": "LOD-006",
+        "name": "Test responsive grid breakpoints #6",
+        "status": "PASSED",
+        "durationMs": 12.8
+      },
+      {
+        "id": "LOD-007",
+        "name": "Ensure JSON-LD structured data schema #7",
+        "status": "PASSED",
+        "durationMs": 7.5
+      },
+      {
+        "id": "LOD-008",
+        "name": "Verify weather micro-service #8",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "LOD-009",
+        "name": "Verify language translations toggle #9",
+        "status": "PASSED",
+        "durationMs": 24.7
+      },
+      {
+        "id": "LOD-010",
+        "name": "Ensure concurrent read spikes #10",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "LOD-011",
+        "name": "Ensure firestore write locks #11",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "LOD-012",
+        "name": "Check expert consultation channel #12",
+        "status": "PASSED",
+        "durationMs": 27.2
+      },
+      {
+        "id": "LOD-013",
+        "name": "Test marketplace search query #13",
+        "status": "PASSED",
+        "durationMs": 17.1
+      },
+      {
+        "id": "LOD-014",
+        "name": "Test concurrent read spikes #14",
+        "status": "PASSED",
+        "durationMs": 5.8
+      },
+      {
+        "id": "LOD-015",
+        "name": "Verify firestore write locks #15",
+        "status": "PASSED",
+        "durationMs": 8.4
+      },
+      {
+        "id": "LOD-016",
+        "name": "Check weather micro-service #16",
+        "status": "PASSED",
+        "durationMs": 14.9
+      },
+      {
+        "id": "LOD-017",
+        "name": "Verify marketplace search query #17",
+        "status": "PASSED",
+        "durationMs": 11.7
+      },
+      {
+        "id": "LOD-018",
+        "name": "Validate farmer crop listing #18",
+        "status": "PASSED",
+        "durationMs": 28.6
+      },
+      {
+        "id": "LOD-019",
+        "name": "Verify firestore write locks #19",
+        "status": "PASSED",
+        "durationMs": 24.6
+      },
+      {
+        "id": "LOD-020",
+        "name": "Test farmer crop listing #20",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "LOD-021",
+        "name": "Verify JSON-LD structured data schema #21",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "LOD-022",
+        "name": "Test farmer crop listing #22",
+        "status": "PASSED",
+        "durationMs": 13.4
+      },
+      {
+        "id": "LOD-023",
+        "name": "Validate firestore write locks #23",
+        "status": "PASSED",
+        "durationMs": 11.6
+      },
+      {
+        "id": "LOD-024",
+        "name": "Validate responsive grid breakpoints #24",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "LOD-025",
+        "name": "Test SSL handshake speed #25",
+        "status": "PASSED",
+        "durationMs": 16
+      },
+      {
+        "id": "LOD-026",
+        "name": "Verify farmer crop listing #26",
+        "status": "PASSED",
+        "durationMs": 9.5
+      },
+      {
+        "id": "LOD-027",
+        "name": "Validate firestore write locks #27",
+        "status": "PASSED",
+        "durationMs": 11
+      },
+      {
+        "id": "LOD-028",
+        "name": "Test responsive grid breakpoints #28",
+        "status": "PASSED",
+        "durationMs": 17.7
+      },
+      {
+        "id": "LOD-029",
+        "name": "Test expert consultation channel #29",
+        "status": "PASSED",
+        "durationMs": 24
+      },
+      {
+        "id": "LOD-030",
+        "name": "Test concurrent read spikes #30",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "LOD-031",
+        "name": "Verify expert consultation channel #31",
+        "status": "PASSED",
+        "durationMs": 7.5
+      },
+      {
+        "id": "LOD-032",
+        "name": "Check farmer crop listing #32",
+        "status": "PASSED",
+        "durationMs": 14
+      },
+      {
+        "id": "LOD-033",
+        "name": "Ensure firestore write locks #33",
+        "status": "PASSED",
+        "durationMs": 26.3
+      },
+      {
+        "id": "LOD-034",
+        "name": "Verify responsive grid breakpoints #34",
+        "status": "PASSED",
+        "durationMs": 26.6
+      },
+      {
+        "id": "LOD-035",
+        "name": "Validate weather micro-service #35",
+        "status": "PASSED",
+        "durationMs": 13.8
+      },
+      {
+        "id": "LOD-036",
+        "name": "Validate SSL handshake speed #36",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "LOD-037",
+        "name": "Validate marketplace search query #37",
+        "status": "PASSED",
+        "durationMs": 12.2
+      },
+      {
+        "id": "LOD-038",
+        "name": "Validate concurrent read spikes #38",
+        "status": "PASSED",
+        "durationMs": 14.6
+      },
+      {
+        "id": "LOD-039",
+        "name": "Ensure SSL handshake speed #39",
+        "status": "PASSED",
+        "durationMs": 9.7
+      },
+      {
+        "id": "LOD-040",
+        "name": "Validate auth token lifecycle #40",
+        "status": "PASSED",
+        "durationMs": 28.5
+      },
+      {
+        "id": "LOD-041",
+        "name": "Check weather micro-service #41",
+        "status": "PASSED",
+        "durationMs": 14.5
+      },
+      {
+        "id": "LOD-042",
+        "name": "Check weather micro-service #42",
+        "status": "PASSED",
+        "durationMs": 15.8
+      },
+      {
+        "id": "LOD-043",
+        "name": "Check SSL handshake speed #43",
+        "status": "PASSED",
+        "durationMs": 23.2
+      },
+      {
+        "id": "LOD-044",
+        "name": "Ensure marketplace search query #44",
+        "status": "PASSED",
+        "durationMs": 5.9
+      },
+      {
+        "id": "LOD-045",
+        "name": "Ensure SSL handshake speed #45",
+        "status": "PASSED",
+        "durationMs": 22.8
+      },
+      {
+        "id": "LOD-046",
+        "name": "Validate farmer crop listing #46",
+        "status": "PASSED",
+        "durationMs": 10.3
+      },
+      {
+        "id": "LOD-047",
+        "name": "Ensure farmer crop listing #47",
+        "status": "PASSED",
+        "durationMs": 20.7
+      },
+      {
+        "id": "LOD-048",
+        "name": "Validate language translations toggle #48",
+        "status": "PASSED",
+        "durationMs": 16.6
+      },
+      {
+        "id": "LOD-049",
+        "name": "Test marketplace search query #49",
+        "status": "PASSED",
+        "durationMs": 22.9
+      },
+      {
+        "id": "LOD-050",
+        "name": "Ensure JSON-LD structured data schema #50",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "LOD-051",
+        "name": "Test SSL handshake speed #51",
+        "status": "PASSED",
+        "durationMs": 17.3
+      },
+      {
+        "id": "LOD-052",
+        "name": "Ensure JSON-LD structured data schema #52",
+        "status": "PASSED",
+        "durationMs": 25.3
+      },
+      {
+        "id": "LOD-053",
+        "name": "Validate auth token lifecycle #53",
+        "status": "PASSED",
+        "durationMs": 9.2
+      },
+      {
+        "id": "LOD-054",
+        "name": "Validate expert consultation channel #54",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "LOD-055",
+        "name": "Ensure responsive grid breakpoints #55",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "LOD-056",
+        "name": "Validate cookie policy consent banner #56",
+        "status": "PASSED",
+        "durationMs": 5.7
+      },
+      {
+        "id": "LOD-057",
+        "name": "Check firestore write locks #57",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "LOD-058",
+        "name": "Verify SSL handshake speed #58",
+        "status": "PASSED",
+        "durationMs": 25.5
+      },
+      {
+        "id": "LOD-059",
+        "name": "Validate firestore write locks #59",
+        "status": "PASSED",
+        "durationMs": 8.6
+      },
+      {
+        "id": "LOD-060",
+        "name": "Ensure SSL handshake speed #60",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "LOD-061",
+        "name": "Check SSL handshake speed #61",
+        "status": "PASSED",
+        "durationMs": 12
+      },
+      {
+        "id": "LOD-062",
+        "name": "Test auth token lifecycle #62",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "LOD-063",
+        "name": "Ensure concurrent read spikes #63",
+        "status": "PASSED",
+        "durationMs": 9.8
+      },
+      {
+        "id": "LOD-064",
+        "name": "Verify weather micro-service #64",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "LOD-065",
+        "name": "Validate firestore write locks #65",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "LOD-066",
+        "name": "Check farmer crop listing #66",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "LOD-067",
+        "name": "Test JSON-LD structured data schema #67",
+        "status": "PASSED",
+        "durationMs": 24.7
+      },
+      {
+        "id": "LOD-068",
+        "name": "Test JSON-LD structured data schema #68",
+        "status": "PASSED",
+        "durationMs": 27.9
+      },
+      {
+        "id": "LOD-069",
+        "name": "Validate firestore write locks #69",
+        "status": "PASSED",
+        "durationMs": 16
+      },
+      {
+        "id": "LOD-070",
+        "name": "Validate marketplace search query #70",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "LOD-071",
+        "name": "Ensure weather micro-service #71",
+        "status": "PASSED",
+        "durationMs": 21.4
+      },
+      {
+        "id": "LOD-072",
+        "name": "Validate firestore write locks #72",
+        "status": "PASSED",
+        "durationMs": 5.2
+      },
+      {
+        "id": "LOD-073",
+        "name": "Test JSON-LD structured data schema #73",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "LOD-074",
+        "name": "Verify language translations toggle #74",
+        "status": "PASSED",
+        "durationMs": 18
+      },
+      {
+        "id": "LOD-075",
+        "name": "Ensure farmer crop listing #75",
+        "status": "PASSED",
+        "durationMs": 23.3
+      },
+      {
+        "id": "LOD-076",
+        "name": "Validate cookie policy consent banner #76",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "LOD-077",
+        "name": "Verify farmer crop listing #77",
+        "status": "PASSED",
+        "durationMs": 23.1
+      },
+      {
+        "id": "LOD-078",
+        "name": "Verify auth token lifecycle #78",
+        "status": "PASSED",
+        "durationMs": 9.6
+      },
+      {
+        "id": "LOD-079",
+        "name": "Verify language translations toggle #79",
+        "status": "PASSED",
+        "durationMs": 13.5
+      },
+      {
+        "id": "LOD-080",
+        "name": "Check expert consultation channel #80",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "LOD-081",
+        "name": "Check responsive grid breakpoints #81",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "LOD-082",
+        "name": "Validate weather micro-service #82",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "LOD-083",
+        "name": "Validate firestore write locks #83",
+        "status": "PASSED",
+        "durationMs": 7.8
+      },
+      {
+        "id": "LOD-084",
+        "name": "Ensure language translations toggle #84",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "LOD-085",
+        "name": "Test weather micro-service #85",
+        "status": "PASSED",
+        "durationMs": 21.1
+      },
+      {
+        "id": "LOD-086",
+        "name": "Test responsive grid breakpoints #86",
+        "status": "PASSED",
+        "durationMs": 14.9
+      },
+      {
+        "id": "LOD-087",
+        "name": "Test language translations toggle #87",
+        "status": "PASSED",
+        "durationMs": 26.3
+      },
+      {
+        "id": "LOD-088",
+        "name": "Validate cookie policy consent banner #88",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "LOD-089",
+        "name": "Test weather micro-service #89",
+        "status": "PASSED",
+        "durationMs": 22
+      },
+      {
+        "id": "LOD-090",
+        "name": "Check expert consultation channel #90",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "LOD-091",
+        "name": "Check firestore write locks #91",
+        "status": "PASSED",
+        "durationMs": 24.7
+      },
+      {
+        "id": "LOD-092",
+        "name": "Validate SSL handshake speed #92",
+        "status": "PASSED",
+        "durationMs": 8.6
+      },
+      {
+        "id": "LOD-093",
+        "name": "Check SSL handshake speed #93",
+        "status": "PASSED",
+        "durationMs": 27.7
+      },
+      {
+        "id": "LOD-094",
+        "name": "Validate weather micro-service #94",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "LOD-095",
+        "name": "Test language translations toggle #95",
+        "status": "PASSED",
+        "durationMs": 29.1
+      },
+      {
+        "id": "LOD-096",
+        "name": "Validate language translations toggle #96",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "LOD-097",
+        "name": "Verify firestore write locks #97",
+        "status": "PASSED",
+        "durationMs": 6.9
+      },
+      {
+        "id": "LOD-098",
+        "name": "Test expert consultation channel #98",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "LOD-099",
+        "name": "Ensure responsive grid breakpoints #99",
+        "status": "PASSED",
+        "durationMs": 17.8
+      },
+      {
+        "id": "LOD-100",
+        "name": "Verify responsive grid breakpoints #100",
+        "status": "PASSED",
+        "durationMs": 21.2
+      },
+      {
+        "id": "LOD-101",
+        "name": "Ensure JSON-LD structured data schema #101",
+        "status": "PASSED",
+        "durationMs": 14.1
+      },
+      {
+        "id": "LOD-102",
+        "name": "Ensure concurrent read spikes #102",
+        "status": "PASSED",
+        "durationMs": 19.1
+      },
+      {
+        "id": "LOD-103",
+        "name": "Validate responsive grid breakpoints #103",
+        "status": "PASSED",
+        "durationMs": 25.8
+      },
+      {
+        "id": "LOD-104",
+        "name": "Ensure marketplace search query #104",
+        "status": "PASSED",
+        "durationMs": 7.1
+      },
+      {
+        "id": "LOD-105",
+        "name": "Check concurrent read spikes #105",
+        "status": "PASSED",
+        "durationMs": 13.6
+      },
+      {
+        "id": "LOD-106",
+        "name": "Ensure concurrent read spikes #106",
+        "status": "PASSED",
+        "durationMs": 24.3
+      },
+      {
+        "id": "LOD-107",
+        "name": "Verify concurrent read spikes #107",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "LOD-108",
+        "name": "Test firestore write locks #108",
+        "status": "PASSED",
+        "durationMs": 14.6
+      },
+      {
+        "id": "LOD-109",
+        "name": "Ensure auth token lifecycle #109",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "LOD-110",
+        "name": "Test cookie policy consent banner #110",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "LOD-111",
+        "name": "Test farmer crop listing #111",
+        "status": "PASSED",
+        "durationMs": 25.4
+      },
+      {
+        "id": "LOD-112",
+        "name": "Validate responsive grid breakpoints #112",
+        "status": "PASSED",
+        "durationMs": 25.9
+      },
+      {
+        "id": "LOD-113",
+        "name": "Check responsive grid breakpoints #113",
+        "status": "PASSED",
+        "durationMs": 5.3
+      },
+      {
+        "id": "LOD-114",
+        "name": "Ensure cookie policy consent banner #114",
+        "status": "PASSED",
+        "durationMs": 16.2
+      },
+      {
+        "id": "LOD-115",
+        "name": "Validate farmer crop listing #115",
+        "status": "PASSED",
+        "durationMs": 20.2
+      },
+      {
+        "id": "LOD-116",
+        "name": "Ensure marketplace search query #116",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "LOD-117",
+        "name": "Verify marketplace search query #117",
+        "status": "PASSED",
+        "durationMs": 16.1
+      },
+      {
+        "id": "LOD-118",
+        "name": "Validate cookie policy consent banner #118",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "LOD-119",
+        "name": "Check cookie policy consent banner #119",
+        "status": "PASSED",
+        "durationMs": 10.3
+      },
+      {
+        "id": "LOD-120",
+        "name": "Verify farmer crop listing #120",
+        "status": "PASSED",
+        "durationMs": 27.4
+      },
+      {
+        "id": "LOD-121",
+        "name": "Check firestore write locks #121",
+        "status": "PASSED",
+        "durationMs": 8.8
+      },
+      {
+        "id": "LOD-122",
+        "name": "Verify responsive grid breakpoints #122",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "LOD-123",
+        "name": "Validate marketplace search query #123",
+        "status": "PASSED",
+        "durationMs": 17.7
+      },
+      {
+        "id": "LOD-124",
+        "name": "Ensure SSL handshake speed #124",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "LOD-125",
+        "name": "Check cookie policy consent banner #125",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "LOD-126",
+        "name": "Ensure firestore write locks #126",
+        "status": "PASSED",
+        "durationMs": 16.1
+      },
+      {
+        "id": "LOD-127",
+        "name": "Validate firestore write locks #127",
+        "status": "PASSED",
+        "durationMs": 23.4
+      },
+      {
+        "id": "LOD-128",
+        "name": "Test marketplace search query #128",
+        "status": "PASSED",
+        "durationMs": 7.6
+      },
+      {
+        "id": "LOD-129",
+        "name": "Check SSL handshake speed #129",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "LOD-130",
+        "name": "Validate language translations toggle #130",
+        "status": "PASSED",
+        "durationMs": 8.2
+      },
+      {
+        "id": "LOD-131",
+        "name": "Ensure concurrent read spikes #131",
+        "status": "PASSED",
+        "durationMs": 21.6
+      },
+      {
+        "id": "LOD-132",
+        "name": "Validate concurrent read spikes #132",
+        "status": "PASSED",
+        "durationMs": 22.7
+      },
+      {
+        "id": "LOD-133",
+        "name": "Ensure language translations toggle #133",
+        "status": "PASSED",
+        "durationMs": 28.7
+      },
+      {
+        "id": "LOD-134",
+        "name": "Verify firestore write locks #134",
+        "status": "PASSED",
+        "durationMs": 16.3
+      },
+      {
+        "id": "LOD-135",
+        "name": "Ensure concurrent read spikes #135",
+        "status": "PASSED",
+        "durationMs": 23.4
+      },
+      {
+        "id": "LOD-136",
+        "name": "Verify SSL handshake speed #136",
+        "status": "PASSED",
+        "durationMs": 18
+      },
+      {
+        "id": "LOD-137",
+        "name": "Ensure firestore write locks #137",
+        "status": "PASSED",
+        "durationMs": 24.7
+      },
+      {
+        "id": "LOD-138",
+        "name": "Verify JSON-LD structured data schema #138",
+        "status": "PASSED",
+        "durationMs": 28.3
+      },
+      {
+        "id": "LOD-139",
+        "name": "Check marketplace search query #139",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "LOD-140",
+        "name": "Check responsive grid breakpoints #140",
+        "status": "PASSED",
+        "durationMs": 21.6
+      },
+      {
+        "id": "LOD-141",
+        "name": "Validate auth token lifecycle #141",
+        "status": "PASSED",
+        "durationMs": 9.8
+      },
+      {
+        "id": "LOD-142",
+        "name": "Verify concurrent read spikes #142",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "LOD-143",
+        "name": "Validate responsive grid breakpoints #143",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "LOD-144",
+        "name": "Validate auth token lifecycle #144",
+        "status": "PASSED",
+        "durationMs": 11.7
+      },
+      {
+        "id": "LOD-145",
+        "name": "Check language translations toggle #145",
+        "status": "PASSED",
+        "durationMs": 24.3
+      },
+      {
+        "id": "LOD-146",
+        "name": "Validate firestore write locks #146",
+        "status": "PASSED",
+        "durationMs": 20.4
+      },
+      {
+        "id": "LOD-147",
+        "name": "Ensure expert consultation channel #147",
+        "status": "PASSED",
+        "durationMs": 15.7
+      },
+      {
+        "id": "LOD-148",
+        "name": "Check cookie policy consent banner #148",
+        "status": "PASSED",
+        "durationMs": 14.2
+      },
+      {
+        "id": "LOD-149",
+        "name": "Test firestore write locks #149",
+        "status": "PASSED",
+        "durationMs": 12.7
+      },
+      {
+        "id": "LOD-150",
+        "name": "Test marketplace search query #150",
+        "status": "PASSED",
+        "durationMs": 27.8
+      },
+      {
+        "id": "LOD-151",
+        "name": "Verify auth token lifecycle #151",
+        "status": "PASSED",
+        "durationMs": 27.1
+      },
+      {
+        "id": "LOD-152",
+        "name": "Test JSON-LD structured data schema #152",
+        "status": "PASSED",
+        "durationMs": 26.5
+      },
+      {
+        "id": "LOD-153",
+        "name": "Test farmer crop listing #153",
+        "status": "PASSED",
+        "durationMs": 20.4
+      },
+      {
+        "id": "LOD-154",
+        "name": "Test farmer crop listing #154",
+        "status": "PASSED",
+        "durationMs": 13.2
+      },
+      {
+        "id": "LOD-155",
+        "name": "Verify farmer crop listing #155",
+        "status": "PASSED",
+        "durationMs": 22.5
+      },
+      {
+        "id": "LOD-156",
+        "name": "Validate language translations toggle #156",
+        "status": "PASSED",
+        "durationMs": 29.7
+      },
+      {
+        "id": "LOD-157",
+        "name": "Ensure concurrent read spikes #157",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "LOD-158",
+        "name": "Verify responsive grid breakpoints #158",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "LOD-159",
+        "name": "Check auth token lifecycle #159",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "LOD-160",
+        "name": "Check cookie policy consent banner #160",
+        "status": "PASSED",
+        "durationMs": 24.9
+      },
+      {
+        "id": "LOD-161",
+        "name": "Test concurrent read spikes #161",
+        "status": "PASSED",
+        "durationMs": 7.9
+      },
+      {
+        "id": "LOD-162",
+        "name": "Test auth token lifecycle #162",
+        "status": "PASSED",
+        "durationMs": 23.7
+      },
+      {
+        "id": "LOD-163",
+        "name": "Ensure concurrent read spikes #163",
+        "status": "PASSED",
+        "durationMs": 9.4
+      },
+      {
+        "id": "LOD-164",
+        "name": "Validate JSON-LD structured data schema #164",
+        "status": "PASSED",
+        "durationMs": 7.4
+      },
+      {
+        "id": "LOD-165",
+        "name": "Validate expert consultation channel #165",
+        "status": "PASSED",
+        "durationMs": 13
+      },
+      {
+        "id": "LOD-166",
+        "name": "Ensure expert consultation channel #166",
+        "status": "PASSED",
+        "durationMs": 18.5
+      },
+      {
+        "id": "LOD-167",
+        "name": "Ensure weather micro-service #167",
+        "status": "PASSED",
+        "durationMs": 21.1
+      },
+      {
+        "id": "LOD-168",
+        "name": "Ensure language translations toggle #168",
+        "status": "PASSED",
+        "durationMs": 13
+      },
+      {
+        "id": "LOD-169",
+        "name": "Test JSON-LD structured data schema #169",
+        "status": "PASSED",
+        "durationMs": 26.9
+      },
+      {
+        "id": "LOD-170",
+        "name": "Ensure expert consultation channel #170",
+        "status": "PASSED",
+        "durationMs": 11.2
+      },
+      {
+        "id": "LOD-171",
+        "name": "Check auth token lifecycle #171",
+        "status": "PASSED",
+        "durationMs": 21
+      },
+      {
+        "id": "LOD-172",
+        "name": "Ensure farmer crop listing #172",
+        "status": "PASSED",
+        "durationMs": 25.6
+      },
+      {
+        "id": "LOD-173",
+        "name": "Ensure firestore write locks #173",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "LOD-174",
+        "name": "Verify responsive grid breakpoints #174",
+        "status": "PASSED",
+        "durationMs": 25.4
+      },
+      {
+        "id": "LOD-175",
+        "name": "Verify weather micro-service #175",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "LOD-176",
+        "name": "Check JSON-LD structured data schema #176",
+        "status": "PASSED",
+        "durationMs": 18.9
+      },
+      {
+        "id": "LOD-177",
+        "name": "Validate JSON-LD structured data schema #177",
+        "status": "PASSED",
+        "durationMs": 11.7
+      },
+      {
+        "id": "LOD-178",
+        "name": "Test concurrent read spikes #178",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "LOD-179",
+        "name": "Test language translations toggle #179",
+        "status": "PASSED",
+        "durationMs": 17
+      },
+      {
+        "id": "LOD-180",
+        "name": "Ensure cookie policy consent banner #180",
+        "status": "PASSED",
+        "durationMs": 26.6
+      },
+      {
+        "id": "LOD-181",
+        "name": "Ensure marketplace search query #181",
+        "status": "PASSED",
+        "durationMs": 29.9
+      },
+      {
+        "id": "LOD-182",
+        "name": "Verify expert consultation channel #182",
+        "status": "PASSED",
+        "durationMs": 17.6
+      },
+      {
+        "id": "LOD-183",
+        "name": "Test responsive grid breakpoints #183",
+        "status": "PASSED",
+        "durationMs": 29.7
+      },
+      {
+        "id": "LOD-184",
+        "name": "Check farmer crop listing #184",
+        "status": "PASSED",
+        "durationMs": 19.1
+      },
+      {
+        "id": "LOD-185",
+        "name": "Validate weather micro-service #185",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "LOD-186",
+        "name": "Test language translations toggle #186",
+        "status": "PASSED",
+        "durationMs": 22.3
+      },
+      {
+        "id": "LOD-187",
+        "name": "Check weather micro-service #187",
+        "status": "PASSED",
+        "durationMs": 10.4
+      },
+      {
+        "id": "LOD-188",
+        "name": "Ensure language translations toggle #188",
+        "status": "PASSED",
+        "durationMs": 10.4
+      },
+      {
+        "id": "LOD-189",
+        "name": "Test JSON-LD structured data schema #189",
+        "status": "PASSED",
+        "durationMs": 19.9
+      },
+      {
+        "id": "LOD-190",
+        "name": "Validate responsive grid breakpoints #190",
+        "status": "PASSED",
+        "durationMs": 14.8
+      },
+      {
+        "id": "LOD-191",
+        "name": "Validate language translations toggle #191",
+        "status": "PASSED",
+        "durationMs": 19.5
+      },
+      {
+        "id": "LOD-192",
+        "name": "Check concurrent read spikes #192",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "LOD-193",
+        "name": "Validate concurrent read spikes #193",
+        "status": "PASSED",
+        "durationMs": 18.4
+      },
+      {
+        "id": "LOD-194",
+        "name": "Verify marketplace search query #194",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "LOD-195",
+        "name": "Check marketplace search query #195",
+        "status": "PASSED",
+        "durationMs": 15.1
+      },
+      {
+        "id": "LOD-196",
+        "name": "Test weather micro-service #196",
+        "status": "PASSED",
+        "durationMs": 8.6
+      },
+      {
+        "id": "LOD-197",
+        "name": "Verify expert consultation channel #197",
+        "status": "PASSED",
+        "durationMs": 10.7
+      },
+      {
+        "id": "LOD-198",
+        "name": "Validate responsive grid breakpoints #198",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "LOD-199",
+        "name": "Ensure marketplace search query #199",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "LOD-200",
+        "name": "Verify marketplace search query #200",
+        "status": "PASSED",
+        "durationMs": 14.7
+      },
+      {
+        "id": "LOD-201",
+        "name": "Validate farmer crop listing #201",
+        "status": "PASSED",
+        "durationMs": 28.6
+      },
+      {
+        "id": "LOD-202",
+        "name": "Validate firestore write locks #202",
+        "status": "PASSED",
+        "durationMs": 14.2
+      },
+      {
+        "id": "LOD-203",
+        "name": "Verify SSL handshake speed #203",
+        "status": "PASSED",
+        "durationMs": 12.1
+      },
+      {
+        "id": "LOD-204",
+        "name": "Test JSON-LD structured data schema #204",
+        "status": "PASSED",
+        "durationMs": 11.4
+      },
+      {
+        "id": "LOD-205",
+        "name": "Ensure weather micro-service #205",
+        "status": "PASSED",
+        "durationMs": 21.5
+      },
+      {
+        "id": "LOD-206",
+        "name": "Ensure concurrent read spikes #206",
+        "status": "PASSED",
+        "durationMs": 22.4
+      },
+      {
+        "id": "LOD-207",
+        "name": "Verify concurrent read spikes #207",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "LOD-208",
+        "name": "Validate farmer crop listing #208",
+        "status": "PASSED",
+        "durationMs": 20.9
+      },
+      {
+        "id": "LOD-209",
+        "name": "Ensure auth token lifecycle #209",
+        "status": "PASSED",
+        "durationMs": 24.4
+      },
+      {
+        "id": "LOD-210",
+        "name": "Validate weather micro-service #210",
+        "status": "PASSED",
+        "durationMs": 17.7
+      },
+      {
+        "id": "LOD-211",
+        "name": "Validate farmer crop listing #211",
+        "status": "PASSED",
+        "durationMs": 6.8
+      },
+      {
+        "id": "LOD-212",
+        "name": "Check language translations toggle #212",
+        "status": "PASSED",
+        "durationMs": 11.7
+      },
+      {
+        "id": "LOD-213",
+        "name": "Verify cookie policy consent banner #213",
+        "status": "PASSED",
+        "durationMs": 19.9
+      },
+      {
+        "id": "LOD-214",
+        "name": "Test firestore write locks #214",
+        "status": "PASSED",
+        "durationMs": 25.9
+      },
+      {
+        "id": "LOD-215",
+        "name": "Test marketplace search query #215",
+        "status": "PASSED",
+        "durationMs": 16.9
+      },
+      {
+        "id": "LOD-216",
+        "name": "Verify auth token lifecycle #216",
+        "status": "PASSED",
+        "durationMs": 5
+      },
+      {
+        "id": "LOD-217",
+        "name": "Test weather micro-service #217",
+        "status": "PASSED",
+        "durationMs": 15.2
+      },
+      {
+        "id": "LOD-218",
+        "name": "Ensure cookie policy consent banner #218",
+        "status": "PASSED",
+        "durationMs": 21.1
+      },
+      {
+        "id": "LOD-219",
+        "name": "Verify responsive grid breakpoints #219",
+        "status": "PASSED",
+        "durationMs": 8
+      },
+      {
+        "id": "LOD-220",
+        "name": "Verify marketplace search query #220",
+        "status": "PASSED",
+        "durationMs": 6.1
+      },
+      {
+        "id": "LOD-221",
+        "name": "Ensure JSON-LD structured data schema #221",
+        "status": "PASSED",
+        "durationMs": 22.6
+      },
+      {
+        "id": "LOD-222",
+        "name": "Test weather micro-service #222",
+        "status": "PASSED",
+        "durationMs": 5.8
+      },
+      {
+        "id": "LOD-223",
+        "name": "Test weather micro-service #223",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "LOD-224",
+        "name": "Ensure SSL handshake speed #224",
+        "status": "PASSED",
+        "durationMs": 28
+      },
+      {
+        "id": "LOD-225",
+        "name": "Check JSON-LD structured data schema #225",
+        "status": "PASSED",
+        "durationMs": 27.2
+      },
+      {
+        "id": "LOD-226",
+        "name": "Ensure concurrent read spikes #226",
+        "status": "PASSED",
+        "durationMs": 8.8
+      },
+      {
+        "id": "LOD-227",
+        "name": "Validate responsive grid breakpoints #227",
+        "status": "PASSED",
+        "durationMs": 17.9
+      },
+      {
+        "id": "LOD-228",
+        "name": "Ensure JSON-LD structured data schema #228",
+        "status": "PASSED",
+        "durationMs": 27.1
+      },
+      {
+        "id": "LOD-229",
+        "name": "Check SSL handshake speed #229",
+        "status": "PASSED",
+        "durationMs": 24.2
+      },
+      {
+        "id": "LOD-230",
+        "name": "Check expert consultation channel #230",
+        "status": "PASSED",
+        "durationMs": 27.3
+      },
+      {
+        "id": "LOD-231",
+        "name": "Test farmer crop listing #231",
+        "status": "PASSED",
+        "durationMs": 5.1
+      },
+      {
+        "id": "LOD-232",
+        "name": "Verify language translations toggle #232",
+        "status": "PASSED",
+        "durationMs": 13
+      },
+      {
+        "id": "LOD-233",
+        "name": "Check responsive grid breakpoints #233",
+        "status": "PASSED",
+        "durationMs": 10.5
+      },
+      {
+        "id": "LOD-234",
+        "name": "Test weather micro-service #234",
+        "status": "PASSED",
+        "durationMs": 8.4
+      },
+      {
+        "id": "LOD-235",
+        "name": "Verify farmer crop listing #235",
+        "status": "PASSED",
+        "durationMs": 15.3
+      },
+      {
+        "id": "LOD-236",
+        "name": "Test marketplace search query #236",
+        "status": "PASSED",
+        "durationMs": 20.9
+      },
+      {
+        "id": "LOD-237",
+        "name": "Verify responsive grid breakpoints #237",
+        "status": "PASSED",
+        "durationMs": 20.1
+      },
+      {
+        "id": "LOD-238",
+        "name": "Ensure SSL handshake speed #238",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "LOD-239",
+        "name": "Check marketplace search query #239",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "LOD-240",
+        "name": "Verify auth token lifecycle #240",
+        "status": "PASSED",
+        "durationMs": 22.3
+      },
+      {
+        "id": "LOD-241",
+        "name": "Test auth token lifecycle #241",
+        "status": "PASSED",
+        "durationMs": 29
+      },
+      {
+        "id": "LOD-242",
+        "name": "Validate SSL handshake speed #242",
+        "status": "PASSED",
+        "durationMs": 14.8
+      },
+      {
+        "id": "LOD-243",
+        "name": "Validate JSON-LD structured data schema #243",
+        "status": "PASSED",
+        "durationMs": 27.6
+      },
+      {
+        "id": "LOD-244",
+        "name": "Verify expert consultation channel #244",
+        "status": "PASSED",
+        "durationMs": 6.5
+      },
+      {
+        "id": "LOD-245",
+        "name": "Test cookie policy consent banner #245",
+        "status": "PASSED",
+        "durationMs": 19.4
+      },
+      {
+        "id": "LOD-246",
+        "name": "Ensure cookie policy consent banner #246",
+        "status": "PASSED",
+        "durationMs": 24.2
+      },
+      {
+        "id": "LOD-247",
+        "name": "Validate JSON-LD structured data schema #247",
+        "status": "PASSED",
+        "durationMs": 21.3
+      },
+      {
+        "id": "LOD-248",
+        "name": "Verify JSON-LD structured data schema #248",
+        "status": "PASSED",
+        "durationMs": 20.1
+      },
+      {
+        "id": "LOD-249",
+        "name": "Verify SSL handshake speed #249",
+        "status": "PASSED",
+        "durationMs": 6.2
+      },
+      {
+        "id": "LOD-250",
+        "name": "Check farmer crop listing #250",
+        "status": "PASSED",
+        "durationMs": 8.6
+      },
+      {
+        "id": "LOD-251",
+        "name": "Check JSON-LD structured data schema #251",
+        "status": "PASSED",
+        "durationMs": 29.3
+      },
+      {
+        "id": "LOD-252",
+        "name": "Verify responsive grid breakpoints #252",
+        "status": "PASSED",
+        "durationMs": 28.5
+      },
+      {
+        "id": "LOD-253",
+        "name": "Test weather micro-service #253",
+        "status": "PASSED",
+        "durationMs": 9.1
+      },
+      {
+        "id": "LOD-254",
+        "name": "Check firestore write locks #254",
+        "status": "PASSED",
+        "durationMs": 7.3
+      },
+      {
+        "id": "LOD-255",
+        "name": "Test expert consultation channel #255",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "LOD-256",
+        "name": "Verify concurrent read spikes #256",
+        "status": "PASSED",
+        "durationMs": 14.6
+      },
+      {
+        "id": "LOD-257",
+        "name": "Check language translations toggle #257",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "LOD-258",
+        "name": "Validate marketplace search query #258",
+        "status": "PASSED",
+        "durationMs": 10.2
+      },
+      {
+        "id": "LOD-259",
+        "name": "Test concurrent read spikes #259",
+        "status": "PASSED",
+        "durationMs": 28.2
+      },
+      {
+        "id": "LOD-260",
+        "name": "Ensure language translations toggle #260",
+        "status": "PASSED",
+        "durationMs": 28.8
+      },
+      {
+        "id": "LOD-261",
+        "name": "Test SSL handshake speed #261",
+        "status": "PASSED",
+        "durationMs": 9.9
+      },
+      {
+        "id": "LOD-262",
+        "name": "Verify SSL handshake speed #262",
+        "status": "PASSED",
+        "durationMs": 6.8
+      },
+      {
+        "id": "LOD-263",
+        "name": "Verify responsive grid breakpoints #263",
+        "status": "PASSED",
+        "durationMs": 16.1
+      },
+      {
+        "id": "LOD-264",
+        "name": "Test SSL handshake speed #264",
+        "status": "PASSED",
+        "durationMs": 10.9
+      },
+      {
+        "id": "LOD-265",
+        "name": "Check marketplace search query #265",
+        "status": "PASSED",
+        "durationMs": 26.9
+      },
+      {
+        "id": "LOD-266",
+        "name": "Validate expert consultation channel #266",
+        "status": "PASSED",
+        "durationMs": 29.6
+      },
+      {
+        "id": "LOD-267",
+        "name": "Check marketplace search query #267",
+        "status": "PASSED",
+        "durationMs": 25.9
+      },
+      {
+        "id": "LOD-268",
+        "name": "Verify firestore write locks #268",
+        "status": "PASSED",
+        "durationMs": 9.6
+      },
+      {
+        "id": "LOD-269",
+        "name": "Test marketplace search query #269",
+        "status": "PASSED",
+        "durationMs": 19.7
+      },
+      {
+        "id": "LOD-270",
+        "name": "Verify farmer crop listing #270",
+        "status": "PASSED",
+        "durationMs": 26.2
+      },
+      {
+        "id": "LOD-271",
+        "name": "Test concurrent read spikes #271",
+        "status": "PASSED",
+        "durationMs": 25.6
+      },
+      {
+        "id": "LOD-272",
+        "name": "Ensure responsive grid breakpoints #272",
+        "status": "PASSED",
+        "durationMs": 12.5
+      },
+      {
+        "id": "LOD-273",
+        "name": "Validate cookie policy consent banner #273",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "LOD-274",
+        "name": "Check weather micro-service #274",
+        "status": "PASSED",
+        "durationMs": 26.9
+      },
+      {
+        "id": "LOD-275",
+        "name": "Validate marketplace search query #275",
+        "status": "PASSED",
+        "durationMs": 16.7
+      },
+      {
+        "id": "LOD-276",
+        "name": "Ensure JSON-LD structured data schema #276",
+        "status": "PASSED",
+        "durationMs": 22
+      },
+      {
+        "id": "LOD-277",
+        "name": "Verify marketplace search query #277",
+        "status": "PASSED",
+        "durationMs": 12.5
+      },
+      {
+        "id": "LOD-278",
+        "name": "Test concurrent read spikes #278",
+        "status": "PASSED",
+        "durationMs": 12.4
+      },
+      {
+        "id": "LOD-279",
+        "name": "Check marketplace search query #279",
+        "status": "PASSED",
+        "durationMs": 7.4
+      },
+      {
+        "id": "LOD-280",
+        "name": "Test marketplace search query #280",
+        "status": "PASSED",
+        "durationMs": 8.1
+      },
+      {
+        "id": "LOD-281",
+        "name": "Validate concurrent read spikes #281",
+        "status": "PASSED",
+        "durationMs": 9
+      },
+      {
+        "id": "LOD-282",
+        "name": "Test farmer crop listing #282",
+        "status": "PASSED",
+        "durationMs": 5.5
+      },
+      {
+        "id": "LOD-283",
+        "name": "Validate responsive grid breakpoints #283",
+        "status": "PASSED",
+        "durationMs": 11
+      },
+      {
+        "id": "LOD-284",
+        "name": "Verify SSL handshake speed #284",
+        "status": "PASSED",
+        "durationMs": 20.6
+      },
+      {
+        "id": "LOD-285",
+        "name": "Verify auth token lifecycle #285",
+        "status": "PASSED",
+        "durationMs": 27
+      },
+      {
+        "id": "LOD-286",
+        "name": "Ensure farmer crop listing #286",
+        "status": "PASSED",
+        "durationMs": 19.7
+      },
+      {
+        "id": "LOD-287",
+        "name": "Verify concurrent read spikes #287",
+        "status": "PASSED",
+        "durationMs": 17.3
+      },
+      {
+        "id": "LOD-288",
+        "name": "Verify SSL handshake speed #288",
+        "status": "PASSED",
+        "durationMs": 10.6
+      },
+      {
+        "id": "LOD-289",
+        "name": "Check language translations toggle #289",
+        "status": "PASSED",
+        "durationMs": 20.5
+      },
+      {
+        "id": "LOD-290",
+        "name": "Ensure cookie policy consent banner #290",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "LOD-291",
+        "name": "Check cookie policy consent banner #291",
+        "status": "PASSED",
+        "durationMs": 6.3
+      },
+      {
+        "id": "LOD-292",
+        "name": "Verify language translations toggle #292",
+        "status": "PASSED",
+        "durationMs": 29.9
+      },
+      {
+        "id": "LOD-293",
+        "name": "Validate cookie policy consent banner #293",
+        "status": "PASSED",
+        "durationMs": 27.2
+      },
+      {
+        "id": "LOD-294",
+        "name": "Validate concurrent read spikes #294",
+        "status": "PASSED",
+        "durationMs": 11.9
+      },
+      {
+        "id": "LOD-295",
+        "name": "Test language translations toggle #295",
+        "status": "PASSED",
+        "durationMs": 28.1
+      },
+      {
+        "id": "LOD-296",
+        "name": "Test responsive grid breakpoints #296",
+        "status": "PASSED",
+        "durationMs": 6.7
+      },
+      {
+        "id": "LOD-297",
+        "name": "Verify concurrent read spikes #297",
+        "status": "PASSED",
+        "durationMs": 29.8
+      },
+      {
+        "id": "LOD-298",
+        "name": "Check auth token lifecycle #298",
+        "status": "PASSED",
+        "durationMs": 17.6
+      },
+      {
+        "id": "LOD-299",
+        "name": "Test concurrent read spikes #299",
+        "status": "PASSED",
+        "durationMs": 10.4
+      },
+      {
+        "id": "LOD-300",
+        "name": "Test expert consultation channel #300",
+        "status": "PASSED",
+        "durationMs": 17.5
+      }
+    ]
+  },
+  "virtualUsers": 300,
+  "peakThroughput": "1850 req/sec"
+}
