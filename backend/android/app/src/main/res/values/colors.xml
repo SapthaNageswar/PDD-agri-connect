@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Launcher icon background -->
     <color name="ic_launcher_background">#2E7D32</color>
+
+    <!-- Splash / window background — deep AgriConnect green -->
+    <color name="splash_bg">#1B5E20</color>
+
+    <!-- Status bar — slightly darker green -->
+    <color name="status_bar">#1B5E20</color>
+
+    <!-- Navigation bar — matches splash background -->
+    <color name="nav_bar">#1B5E20</color>
+
+    <!-- Primary brand colours -->
+    <color name="colorPrimary">#2E7D32</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#66BB6A</color>
 </resources>
