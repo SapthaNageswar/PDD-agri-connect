@@ -21,6 +21,8 @@ import {
   Tabs,
   Badge } from
 '../components/ui';
+import { auth, db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 
 const DISEASE_DATABASE = [
   {
@@ -113,10 +115,13 @@ export const Advisory = () => {
   const [showManualForm, setShowManualForm] = useState(false);
   const [selectedCrop, setSelectedCrop] = useState('Tomato');
   const [selectedSymptom, setSelectedSymptom] = useState('Concentric dark spots or rings on lower leaves');
+  const [uploadedImagePreview, setUploadedImagePreview] = useState<string | null>(null);
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
+      const previewUrl = URL.createObjectURL(file);
+      setUploadedImagePreview(previewUrl);
       const filename = file.name.toLowerCase();
       setIsAnalyzing(true);
       setResult(null);
@@ -143,6 +148,14 @@ export const Advisory = () => {
           toast.success(`Analysis complete! Identified ${match.disease}`);
         }
         setResult(match);
+        if (auth.currentUser?.uid) {
+          addDoc(collection(db, 'advisories'), {
+            uid: auth.currentUser.uid,
+            topic: match.disease,
+            type: 'disease_detection',
+            createdAt: new Date().toISOString(),
+          }).catch(console.error);
+        }
       }, 2500);
     }
   };
@@ -158,6 +171,14 @@ export const Advisory = () => {
                  || DISEASE_DATABASE[0];
       setResult(match);
       toast.success('Diagnosis complete!');
+      if (auth.currentUser?.uid) {
+        addDoc(collection(db, 'advisories'), {
+          uid: auth.currentUser.uid,
+          topic: match.disease,
+          type: 'manual_diagnosis',
+          createdAt: new Date().toISOString(),
+        }).catch(console.error);
+      }
     }, 1500);
   };
 
@@ -196,6 +217,14 @@ export const Advisory = () => {
 
       });
       toast.success('Recommendations generated!');
+      if (auth.currentUser?.uid) {
+        addDoc(collection(db, 'advisories'), {
+          uid: auth.currentUser.uid,
+          topic: 'Crop Recommendation',
+          type: 'crop_recommendation',
+          createdAt: new Date().toISOString(),
+        }).catch(console.error);
+      }
     }, 2000);
   };
   return (
@@ -261,7 +290,7 @@ export const Advisory = () => {
                         <input
                           type="file"
                           accept="image/*"
-                          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                          className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
                           onChange={handleImageUpload}
                         />
                         <Upload className="h-12 w-12 text-earth-400 mx-auto mb-4" />
@@ -271,7 +300,7 @@ export const Advisory = () => {
                         <p className="text-sm text-earth-500">
                           Take a clear photo of the affected leaves or fruit.
                         </p>
-                        <Button variant="outline" className="mt-6">
+                        <Button variant="outline" className="mt-6 pointer-events-none">
                           Select Photo
                         </Button>
                       </div>

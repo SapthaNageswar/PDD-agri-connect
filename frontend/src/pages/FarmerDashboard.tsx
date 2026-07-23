@@ -27,15 +27,25 @@ import {
 '../components/ui';
 import { mockPriceHistory, mockWeather, mockMarketPrices } from '../data/mock';
 import { auth, db } from '../firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, collection, onSnapshot } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 
 export const FarmerDashboard = () => {
-  const [userName, setUserName] = useState('Ramesh');
+  const [userName, setUserName] = useState('User');
   const [userLocation, setUserLocation] = useState('Ludhiana');
+  const [activeListings, setActiveListings] = useState<number>(0);
+  const [totalSales, setTotalSales] = useState<number>(0);
+  const [pendingOrders, setPendingOrders] = useState<number>(0);
+  const [aiAdvisories, setAiAdvisories] = useState<number>(0);
+  const [recentOrders, setRecentOrders] = useState<any[]>([]);
+  const [recentAdvisories, setRecentAdvisories] = useState<any[]>([]);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    let unsubProducts: (() => void) | undefined;
+    let unsubOrders: (() => void) | undefined;
+    let unsubAdvisories: (() => void) | undefined;
+
+    const unsubscribeAuth = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
         try {
           const userDoc = await getDoc(doc(db, 'users', currentUser.uid));
@@ -43,14 +53,110 @@ export const FarmerDashboard = () => {
             const data = userDoc.data();
             if (data.name) setUserName(data.name);
             if (data.location) setUserLocation(data.location);
+          } else if (currentUser.displayName) {
+            setUserName(currentUser.displayName);
           }
         } catch (error) {
           console.error('Error fetching user profile:', error);
         }
+
+        // Listen to User Products (Active Listings)
+        try {
+          unsubProducts = onSnapshot(collection(db, 'products'), (snapshot) => {
+            const myProducts = snapshot.docs.filter(d => {
+              const data = d.data();
+              return data.uid === currentUser.uid || data.sellerUid === currentUser.uid;
+            });
+            setActiveListings(myProducts.length);
+          }, err => console.warn('Products snapshot error:', err));
+        } catch (e) {
+          console.error('Error setting products listener:', e);
+        }
+
+        // Listen to User Orders (Pending Orders & Total Sales)
+        try {
+          unsubOrders = onSnapshot(collection(db, 'orders'), (snapshot) => {
+            const allOrders = snapshot.docs.map(d => ({ ...d.data(), id: d.id })) as any[];
+            const myOrders = allOrders.filter(o =>
+              o.sellerId === currentUser.uid || o.sellerUid === currentUser.uid
+            );
+            const pending = myOrders.filter(o => !o.status || o.status.toLowerCase() === 'pending');
+            setPendingOrders(pending.length);
+
+            const salesSum = myOrders.reduce((sum, o) => sum + (Number(o.totalPrice) || 0), 0);
+            setTotalSales(salesSum);
+            
+            setRecentOrders(myOrders.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 5));
+          }, err => console.warn('Orders snapshot error:', err));
+        } catch (e) {
+          console.error('Error setting orders listener:', e);
+        }
+
+        // Listen to User AI Advisories
+        try {
+          unsubAdvisories = onSnapshot(collection(db, 'advisories'), (snapshot) => {
+            const myAdvisories = snapshot.docs.map(d => ({ ...d.data(), id: d.id })).filter(a => a.uid === currentUser.uid) as any[];
+            setAiAdvisories(myAdvisories.length);
+            
+            setRecentAdvisories(myAdvisories.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 5));
+          }, err => console.warn('Advisories snapshot error:', err));
+        } catch (e) {
+          console.error('Error setting advisories listener:', e);
+        }
+      } else {
+        setUserName('User');
+        setActiveListings(0);
+        setTotalSales(0);
+        setPendingOrders(0);
+        setAiAdvisories(0);
       }
     });
-    return () => unsubscribe();
+
+    return () => {
+      unsubscribeAuth();
+      if (unsubProducts) unsubProducts();
+      if (unsubOrders) unsubOrders();
+      if (unsubAdvisories) unsubAdvisories();
+    };
   }, []);
+
+  const formatSales = (val: number) => {
+    if (!val || val === 0) return '₹0';
+    if (val >= 100000) return `₹${(val / 100000).toFixed(1)}L`;
+    if (val >= 1000) return `₹${(val / 1000).toFixed(1)}K`;
+    return `₹${val}`;
+  };
+
+  const stats = [
+    {
+      title: 'Active Listings',
+      value: activeListings.toString(),
+      icon: Package,
+      color: 'text-blue-600',
+      bg: 'bg-blue-100'
+    },
+    {
+      title: 'Total Sales',
+      value: formatSales(totalSales),
+      icon: IndianRupee,
+      color: 'text-green-600',
+      bg: 'bg-green-100'
+    },
+    {
+      title: 'Pending Orders',
+      value: pendingOrders.toString(),
+      icon: TrendingUp,
+      color: 'text-amber-600',
+      bg: 'bg-amber-100'
+    },
+    {
+      title: 'AI Advisories',
+      value: aiAdvisories.toString(),
+      icon: Sprout,
+      color: 'text-purple-600',
+      bg: 'bg-purple-100'
+    }
+  ];
 
   return (
     <div className="space-y-6">
@@ -85,41 +191,11 @@ export const FarmerDashboard = () => {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        {[
-        {
-          title: 'Active Listings',
-          value: '4',
-          icon: Package,
-          color: 'text-blue-600',
-          bg: 'bg-blue-100'
-        },
-        {
-          title: 'Total Sales',
-          value: '₹1.2L',
-          icon: IndianRupee,
-          color: 'text-green-600',
-          bg: 'bg-green-100'
-        },
-        {
-          title: 'Pending Orders',
-          value: '2',
-          icon: TrendingUp,
-          color: 'text-amber-600',
-          bg: 'bg-amber-100'
-        },
-        {
-          title: 'AI Advisories',
-          value: '12',
-          icon: Sprout,
-          color: 'text-purple-600',
-          bg: 'bg-purple-100'
-        }].
-        map((stat, i) =>
-        <Card key={i}>
+        {stats.map((stat, i) => (
+          <Card key={i}>
             <CardContent className="p-6 flex items-center gap-4">
               <div
-              className={`h-12 w-12 rounded-full ${stat.bg} flex items-center justify-center`}>
-              
+                className={`h-12 w-12 rounded-full ${stat.bg} flex items-center justify-center`}>
                 <stat.icon className={`h-6 w-6 ${stat.color}`} />
               </div>
               <div>
@@ -132,7 +208,7 @@ export const FarmerDashboard = () => {
               </div>
             </CardContent>
           </Card>
-        )}
+        ))}
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
@@ -271,6 +347,71 @@ export const FarmerDashboard = () => {
           </Card>
         </div>
       </div>
-    </div>);
+      
+      {/* Recent Activity Sections */}
+      <div className="grid lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent Orders Received</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {recentOrders.length === 0 ? (
+              <p className="text-earth-500 text-sm py-4">No recent orders yet.</p>
+            ) : (
+              <div className="space-y-4">
+                {recentOrders.map(order => (
+                  <div key={order.id} className="flex items-center justify-between p-3 border border-earth-100 rounded-xl bg-earth-50">
+                    <div>
+                      <p className="font-bold text-earth-900">{order.productName || 'Product'}</p>
+                      <p className="text-xs text-earth-500">Qty: {order.qty}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="font-bold text-earth-900">₹{order.totalPrice}</p>
+                      <Badge variant="warning" className="mt-1">
+                        {order.status || 'Pending'}
+                      </Badge>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent AI Advisories</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {recentAdvisories.length === 0 ? (
+              <p className="text-earth-500 text-sm py-4">No recent advisories yet.</p>
+            ) : (
+              <div className="space-y-4">
+                {recentAdvisories.map(adv => {
+                  const advDate = adv.createdAt ? new Date(adv.createdAt).toLocaleDateString('en-IN', {
+                    month: 'short',
+                    day: 'numeric'
+                  }) : '';
+                  return (
+                    <div key={adv.id} className="flex items-center justify-between p-3 border border-earth-100 rounded-xl bg-earth-50">
+                      <div className="flex items-center gap-3">
+                        <div className="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center">
+                          <Sprout className="h-4 w-4 text-purple-600" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-earth-900">{adv.topic}</p>
+                          <p className="text-xs text-earth-500">{advDate}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
 
 };

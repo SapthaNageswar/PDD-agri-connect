@@ -5,7 +5,7 @@ import { toast } from 'sonner';
 import { Input, Button, Badge } from '../components/ui';
 import { mockProducts } from '../data/mock';
 import { useAuth } from '../lib/auth';
-import { auth, db } from '../firebase';
+import { db, auth } from '../firebase';
 import { collection, addDoc, onSnapshot } from 'firebase/firestore';
 
 export const Marketplace = () => {
@@ -15,32 +15,46 @@ export const Marketplace = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const unsub = onSnapshot(collection(db, 'products'), (snapshot) => {
-      const data = snapshot.docs.map(doc => {
-        const d = doc.data();
-        return {
-          id: doc.id,
-          name: d.name ?? '',
-          category: d.category ?? '',
-          price: d.price ?? 0,
-          unit: d.unit ?? '',
-          rating: d.rating ?? 0,
-          reviews: d.reviews ?? 0,
-          image: d.image ?? '',
-          seller: d.seller ?? '',
-          location: d.location ?? '',
-        };
-      });
-      console.log('Fetched products from Firestore:', data);
-      setProducts([...mockProducts, ...data]);
-      setLoading(false);
-    }, (error) => {
-      console.error('Failed to load products:', error);
-      toast.error('Unable to load marketplace data.');
-      setLoading(false);
-    });
+    let settled = false;
+
+    const unsub = onSnapshot(
+      collection(db, 'products'),
+      (snapshot) => {
+        settled = true;
+        const data = snapshot.docs.map(doc => {
+          const d = doc.data();
+          return {
+            id: doc.id,
+            uid: d.uid,
+            sellerUid: d.sellerUid,
+            name: d.name ?? '',
+            category: d.category ?? '',
+            price: d.price ?? 0,
+            unit: d.unit ?? '',
+            rating: d.rating ?? 0,
+            reviews: d.reviews ?? 0,
+            image: d.image ?? '',
+            seller: d.seller ?? '',
+            location: d.location ?? '',
+          };
+        });
+        setProducts([...mockProducts, ...data]);
+        setLoading(false);
+      },
+      (error) => {
+        // Firestore rules not yet deployed or network unavailable – fall back
+        // to mock data silently so the marketplace still works.
+        console.warn('Firestore unavailable, using local mock data:', error.message);
+        if (!settled) {
+          setProducts([...mockProducts]);
+          setLoading(false);
+        }
+      }
+    );
+
     return () => unsub();
   }, []);
+
 
   // UI state
   const [search, setSearch] = useState('');
@@ -72,8 +86,11 @@ export const Marketplace = () => {
       alert('Please fill all required fields');
       return;
     }
+    const currentUser = auth.currentUser;
     const newProduct = {
       id: Date.now().toString(),
+      uid: currentUser?.uid || '',
+      sellerUid: currentUser?.uid || '',
       name: newName,
       category: newCategory,
       price: parseFloat(newPrice),
@@ -81,8 +98,9 @@ export const Marketplace = () => {
       rating: 4.5,
       reviews: 0,
       image: newImage,
-      seller: 'Your Farm',
+      seller: currentUser?.displayName || 'Your Farm',
       location: newLocation,
+      createdAt: new Date().toISOString()
     };
     // Update local state
     setProducts(prev => [...prev, newProduct]);

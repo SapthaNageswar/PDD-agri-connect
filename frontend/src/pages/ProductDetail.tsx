@@ -43,6 +43,8 @@ export const ProductDetail = () => {
             const data = docSnap.data();
             setProduct({
               id: docSnap.id,
+              uid: data.uid,
+              sellerUid: data.sellerUid,
               name: data.name ?? '',
               category: data.category ?? '',
               price: data.price ?? 0,
@@ -123,9 +125,12 @@ export const ProductDetail = () => {
       if (!uid) throw new Error('User not authenticated');
       await addDoc(collection(db, 'orders'), {
         uid,
+        sellerId: product.sellerUid || product.uid || product.seller || '',
         productId: product.id,
+        productName: product.name,
         qty,
         totalPrice: qty * product.price,
+        status: 'pending',
         createdAt: new Date().toISOString(),
       });
       toast.success(

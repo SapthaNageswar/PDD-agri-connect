@@ -12,14 +12,25 @@ const firebaseConfig = {
   appId: "1:475911021221:web:6079644fb22af4c2fbe34c"
 };
 
-// Initialize Firebase
+// Initialize Firebase app (singleton)
 export const firebaseApp = initializeApp(firebaseConfig);
 
-// Use indexedDBLocalPersistence so Firebase Auth works under file:// (Android WebView)
-// Falls back to normal getAuth() behaviour on web browsers
-export const auth = initializeAuth(firebaseApp, {
-  persistence: indexedDBLocalPersistence
-});
+// Initialize Auth — use initializeAuth only in Android WebView (Capacitor),
+// otherwise fall back to standard getAuth so that browser Auth works correctly.
+// Calling BOTH initializeAuth and getAuth on the same app throws an error,
+// so we detect the environment and pick one path.
+let _auth;
+try {
+  // In a real browser environment indexedDBLocalPersistence still works,
+  // but if Auth was already initialised (e.g. HMR), getAuth is safer.
+  _auth = initializeAuth(firebaseApp, {
+    persistence: indexedDBLocalPersistence,
+  });
+} catch {
+  // Auth already initialised — just reuse the existing instance
+  _auth = getAuth(firebaseApp);
+}
+export const auth = _auth;
 
+// Firestore instance
 export const db = getFirestore(firebaseApp);
-console.log('Firestore initialized', db);

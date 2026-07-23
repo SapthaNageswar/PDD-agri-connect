@@ -187,7 +187,7 @@ export const mockExperts = [
   specialty: 'Agronomy',
   rating: 4.7,
   experience: '10 years',
-  image: 'https://via.placeholder.com/200',
+  image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200',
   available: true
 }];
 

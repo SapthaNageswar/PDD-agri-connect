@@ -1,54 +1,93 @@
 package com.agriconnect.app;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
+import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
-    private NavController navController;
-    private BottomNavigationView bottomNav;
-
-    // Screens where bottom nav should be HIDDEN
-    private static final Set<Integer> HIDE_BOTTOM_NAV = new HashSet<>(Arrays.asList(
-        R.id.landingFragment,
-        R.id.authFragment
-    ));
+    private WebView webView;
+    private ValueCallback<Uri[]> uploadMessage;
+    private static final int FILECHOOSER_RESULTCODE = 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bottomNav = findViewById(R.id.bottom_navigation);
+        webView = findViewById(R.id.web_view);
 
-        NavHostFragment navHostFragment = (NavHostFragment)
-            getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
-        if (navHostFragment != null) {
-            navController = navHostFragment.getNavController();
-            NavigationUI.setupWithNavController(bottomNav, navController);
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
+        settings.setDomStorageEnabled(true);
+        settings.setDatabaseEnabled(true);
+        settings.setAllowFileAccess(true);
+        settings.setAllowContentAccess(true);
+        settings.setAllowFileAccessFromFileURLs(true);
+        settings.setAllowUniversalAccessFromFileURLs(true);
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
 
-            // Show/hide bottom nav based on destination
-            navController.addOnDestinationChangedListener((controller, destination, args) -> {
-                if (HIDE_BOTTOM_NAV.contains(destination.getId())) {
-                    bottomNav.setVisibility(View.GONE);
-                } else {
-                    bottomNav.setVisibility(View.VISIBLE);
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return false;
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return false;
+            }
+        });
+
+        webView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, FileChooserParams fileChooserParams) {
+                if (uploadMessage != null) {
+                    uploadMessage.onReceiveValue(null);
+                    uploadMessage = null;
                 }
-            });
+                uploadMessage = filePathCallback;
+
+                Intent intent = fileChooserParams.createIntent();
+                try {
+                    startActivityForResult(intent, FILECHOOSER_RESULTCODE);
+                } catch (Exception e) {
+                    uploadMessage = null;
+                    return false;
+                }
+                return true;
+            }
+        });
+
+        webView.loadUrl("file:///android_asset/public/index.html#/");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == FILECHOOSER_RESULTCODE) {
+            if (uploadMessage == null) return;
+            uploadMessage.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(resultCode, data));
+            uploadMessage = null;
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        return navController.navigateUp() || super.onSupportNavigateUp();
+    public void onBackPressed() {
+        if (webView != null && webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            super.onBackPressed();
+        }
     }
 }

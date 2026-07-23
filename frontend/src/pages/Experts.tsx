@@ -73,7 +73,7 @@ export const Experts = () => {
                   className="w-24 h-24 rounded-2xl object-cover border border-earth-200"
                   loading="lazy"
                   onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).src = 'https://via.placeholder.com/200';
+                    (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200';
                   }}
                 />
               

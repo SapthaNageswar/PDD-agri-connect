@@ -18,8 +18,8 @@ import {
 import { cn } from '../lib/utils';
 import { Badge } from './ui';
 import { useAuth } from '../lib/auth';
-import { getAuth, signOut } from 'firebase/auth';
-import { firebaseApp } from '../firebase';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -69,7 +69,7 @@ const translations: Record<string, Record<string, string>> = {
 };
 
 export const Layout = ({ children }: LayoutProps) => {
-  const { role, setRole, logout } = useAuth();
+  const { role, setRole } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [lang, setLang] = useState('EN');
   const location = useLocation();
@@ -151,13 +151,11 @@ export const Layout = ({ children }: LayoutProps) => {
 
   const handleLogout = async () => {
     try {
-      const auth = getAuth(firebaseApp);
       await signOut(auth);
     } catch (e) {
       console.error('Logout error', e);
     }
     setRole('farmer');
-    if (logout) logout();
     navigate('/');
   };
 

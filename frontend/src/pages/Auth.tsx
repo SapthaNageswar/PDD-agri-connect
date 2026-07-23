@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-import { firebaseApp } from '../firebase';
-import { db } from '../firebase';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth, db } from '../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import { Sprout, Tractor, ShoppingCart, ShieldCheck } from 'lucide-react';
 import {
@@ -26,7 +25,6 @@ export const Auth = ({ type = 'login' }: {type?: 'login' | 'register';}) => {
   const navigate = useNavigate();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const auth = getAuth(firebaseApp);
     console.log('Auth submit: ', { type, email, selectedRole });
     try {
       if (type === 'login') {

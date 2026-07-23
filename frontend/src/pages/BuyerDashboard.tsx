@@ -21,10 +21,17 @@ export const BuyerDashboard = () => {
 
   useEffect(() => {
     // 1. Fetch products from Firestore and merge with mockProducts
-    const unsubProducts = onSnapshot(collection(db, 'products'), (snapshot) => {
-      const dbProds = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-      setProducts([...mockProducts, ...dbProds]);
-    });
+    const unsubProducts = onSnapshot(
+      collection(db, 'products'),
+      (snapshot) => {
+        const dbProds = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
+        setProducts([...mockProducts, ...dbProds]);
+      },
+      (error) => {
+        console.warn('Firestore products unavailable, using mock data:', error.message);
+        setProducts([...mockProducts]);
+      }
+    );
 
     let unsubOrders: (() => void) | undefined;
 
@@ -106,7 +113,7 @@ export const BuyerDashboard = () => {
             </div>
             <div>
               <p className="text-sm font-medium text-earth-500">Saved Items</p>
-              <p className="text-2xl font-bold text-earth-900">12</p>
+              <p className="text-2xl font-bold text-earth-900">0</p>
             </div>
           </CardContent>
         </Card>
