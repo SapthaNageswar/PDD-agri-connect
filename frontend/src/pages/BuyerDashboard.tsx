@@ -95,25 +95,29 @@ export const BuyerDashboard = () => {
         </Card>
         <Card>
           <CardContent className="p-6 flex items-center gap-4">
-            <div className="h-12 w-12 rounded-full bg-amber-100 flex items-center justify-center">
-              <Clock className="h-6 w-6 text-amber-600" />
+            <div className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
+              <Clock className="h-6 w-6 text-green-600" />
             </div>
             <div>
               <p className="text-sm font-medium text-earth-500">
-                Pending Delivery
+                Confirmed Orders
               </p>
-              <p className="text-2xl font-bold text-earth-900">{orders.length}</p>
+              <p className="text-2xl font-bold text-earth-900">
+                {orders.filter(o => o.status === 'accepted').length}
+              </p>
             </div>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-6 flex items-center gap-4">
-            <div className="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center">
-              <Star className="h-6 w-6 text-green-600" />
+            <div className="h-12 w-12 rounded-full bg-amber-100 flex items-center justify-center">
+              <Star className="h-6 w-6 text-amber-600" />
             </div>
             <div>
-              <p className="text-sm font-medium text-earth-500">Saved Items</p>
-              <p className="text-2xl font-bold text-earth-900">0</p>
+              <p className="text-sm font-medium text-earth-500">Awaiting Farmer</p>
+              <p className="text-2xl font-bold text-earth-900">
+                {orders.filter(o => !o.status || o.status === 'pending').length}
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -129,8 +133,10 @@ export const BuyerDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4 mt-2">
-              {orders.slice(0, 5).map((order) => {
+              {orders.slice(0, 10).map((order) => {
                 const prod = products.find(p => p.id === order.productId) || mockProducts[0];
+                const displayName = order.productName || prod.name;
+                const displayImage = order.productImage || prod.image;
                 const orderDate = order.createdAt ? new Date(order.createdAt).toLocaleDateString('en-IN', {
                   month: 'short',
                   day: 'numeric',
@@ -141,19 +147,19 @@ export const BuyerDashboard = () => {
                     key={order.id}
                     className="flex items-center justify-between p-4 border border-earth-100 rounded-xl bg-earth-50">
                     <div className="flex items-center gap-4">
-                      <div className="h-12 w-12 bg-white rounded-lg border border-earth-200 overflow-hidden">
+                      <div className="h-12 w-12 bg-white rounded-lg border border-earth-200 overflow-hidden flex-shrink-0">
                         <img
-                          src={prod.image}
-                          alt={prod.name}
+                          src={displayImage}
+                          alt={displayName}
                           className="w-full h-full object-cover"
                         />
                       </div>
                       <div>
                         <p className="font-bold text-earth-900">
-                          {prod.name}
+                          {displayName}
                         </p>
-                        <p className="text-sm text-earth-500">
-                          Ordered on {orderDate}
+                        <p className="text-xs text-earth-500">
+                          Qty: {order.qty} • Ordered on {orderDate}
                         </p>
                       </div>
                     </div>
@@ -161,8 +167,14 @@ export const BuyerDashboard = () => {
                       <p className="font-bold text-earth-900">
                         ₹{order.totalPrice}
                       </p>
-                      <Badge variant="warning" className="mt-1">
-                        In Transit
+                      <Badge
+                        variant={
+                          order.status === 'accepted' ? 'success' :
+                          order.status === 'rejected' ? 'danger' : 'warning'
+                        }
+                        className="mt-1">
+                        {order.status === 'accepted' ? '✓ Confirmed by Farmer' :
+                         order.status === 'rejected' ? '✗ Rejected by Farmer' : '⏳ Awaiting Farmer'}
                       </Badge>
                     </div>
                   </div>
