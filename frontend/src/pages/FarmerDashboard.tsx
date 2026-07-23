@@ -15,7 +15,10 @@ import {
   CloudSun,
   ArrowRight,
   Package,
-  IndianRupee } from
+  IndianRupee,
+  CheckCircle,
+  XCircle,
+  Banknote } from
 'lucide-react';
 import {
   Card,
@@ -27,7 +30,7 @@ import {
 '../components/ui';
 import { mockPriceHistory, mockWeather, mockMarketPrices } from '../data/mock';
 import { auth, db } from '../firebase';
-import { doc, getDoc, collection, onSnapshot } from 'firebase/firestore';
+import { doc, getDoc, collection, onSnapshot, updateDoc, query, where } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 
 export const FarmerDashboard = () => {
@@ -39,6 +42,7 @@ export const FarmerDashboard = () => {
   const [aiAdvisories, setAiAdvisories] = useState<number>(0);
   const [recentOrders, setRecentOrders] = useState<any[]>([]);
   const [recentAdvisories, setRecentAdvisories] = useState<any[]>([]);
+  const [myProductsList, setMyProductsList] = useState<any[]>([]);
 
   useEffect(() => {
     let unsubProducts: (() => void) | undefined;
@@ -63,11 +67,11 @@ export const FarmerDashboard = () => {
         // Listen to User Products (Active Listings)
         try {
           unsubProducts = onSnapshot(collection(db, 'products'), (snapshot) => {
-            const myProducts = snapshot.docs.filter(d => {
-              const data = d.data();
-              return data.uid === currentUser.uid || data.sellerUid === currentUser.uid;
+            const myProducts = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })).filter((d: any) => {
+              return d.uid === currentUser.uid || d.sellerUid === currentUser.uid;
             });
             setActiveListings(myProducts.length);
+            setMyProductsList(myProducts);
           }, err => console.warn('Products snapshot error:', err));
         } catch (e) {
           console.error('Error setting products listener:', e);
@@ -75,18 +79,16 @@ export const FarmerDashboard = () => {
 
         // Listen to User Orders (Pending Orders & Total Sales)
         try {
-          unsubOrders = onSnapshot(collection(db, 'orders'), (snapshot) => {
-            const allOrders = snapshot.docs.map(d => ({ ...d.data(), id: d.id })) as any[];
-            const myOrders = allOrders.filter(o =>
-              o.sellerId === currentUser.uid || o.sellerUid === currentUser.uid
-            );
-            const pending = myOrders.filter(o => !o.status || o.status.toLowerCase() === 'pending');
+          const ordersQuery = query(collection(db, 'orders'), where('sellerId', '==', currentUser.uid));
+          unsubOrders = onSnapshot(ordersQuery, (snapshot) => {
+            const myOrders = snapshot.docs.map(d => ({ ...d.data(), id: d.id })) as any[];
+            const pending = myOrders.filter(o => !o.farmerStatus || o.farmerStatus === 'pending');
             setPendingOrders(pending.length);
 
             const salesSum = myOrders.reduce((sum, o) => sum + (Number(o.totalPrice) || 0), 0);
             setTotalSales(salesSum);
             
-            setRecentOrders(myOrders.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 5));
+            setRecentOrders(myOrders.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 10));
           }, err => console.warn('Orders snapshot error:', err));
         } catch (e) {
           console.error('Error setting orders listener:', e);
@@ -125,6 +127,30 @@ export const FarmerDashboard = () => {
     if (val >= 100000) return `₹${(val / 100000).toFixed(1)}L`;
     if (val >= 1000) return `₹${(val / 1000).toFixed(1)}K`;
     return `₹${val}`;
+  };
+
+  const acceptOrder = async (orderId: string) => {
+    try {
+      await updateDoc(doc(db, 'orders', orderId), {
+        status: 'accepted',
+        farmerStatus: 'accepted',
+        acceptedAt: new Date().toISOString(),
+      });
+    } catch (e) {
+      console.error('Failed to accept order', e);
+    }
+  };
+
+  const rejectOrder = async (orderId: string) => {
+    try {
+      await updateDoc(doc(db, 'orders', orderId), {
+        status: 'rejected',
+        farmerStatus: 'rejected',
+        rejectedAt: new Date().toISOString(),
+      });
+    } catch (e) {
+      console.error('Failed to reject order', e);
+    }
   };
 
   const stats = [
@@ -360,17 +386,40 @@ export const FarmerDashboard = () => {
             ) : (
               <div className="space-y-4">
                 {recentOrders.map(order => (
-                  <div key={order.id} className="flex items-center justify-between p-3 border border-earth-100 rounded-xl bg-earth-50">
-                    <div>
-                      <p className="font-bold text-earth-900">{order.productName || 'Product'}</p>
-                      <p className="text-xs text-earth-500">Qty: {order.qty}</p>
+                  <div key={order.id} className="p-3 border border-earth-100 rounded-xl bg-earth-50 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="font-bold text-earth-900">{order.productName || 'Product'}</p>
+                        <p className="text-xs text-earth-500">Qty: {order.qty}</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="font-bold text-earth-900">₹{order.totalPrice}</p>
+                        <div className="flex items-center gap-1 justify-end mt-1">
+                          <Banknote className="h-3 w-3 text-green-600" />
+                          <span className="text-xs text-green-700 font-medium">COD</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-right">
-                      <p className="font-bold text-earth-900">₹{order.totalPrice}</p>
-                      <Badge variant="warning" className="mt-1">
-                        {order.status || 'Pending'}
+                    {(!order.farmerStatus || order.farmerStatus === 'pending') ? (
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => acceptOrder(order.id)}
+                          className="flex-1 flex items-center justify-center gap-1 py-1.5 bg-green-100 hover:bg-green-200 text-green-700 font-semibold rounded-lg text-sm transition-colors">
+                          <CheckCircle className="h-4 w-4" /> Accept
+                        </button>
+                        <button
+                          onClick={() => rejectOrder(order.id)}
+                          className="flex-1 flex items-center justify-center gap-1 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 font-semibold rounded-lg text-sm transition-colors">
+                          <XCircle className="h-4 w-4" /> Reject
+                        </button>
+                      </div>
+                    ) : (
+                      <Badge
+                        variant={order.farmerStatus === 'accepted' ? 'success' : 'danger'}
+                        className="w-full text-center justify-center">
+                        {order.farmerStatus === 'accepted' ? '✓ Accepted' : '✗ Rejected'}
                       </Badge>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -411,6 +460,48 @@ export const FarmerDashboard = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* My Listed Produce Section */}
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between">
+          <CardTitle>My Listed Produce</CardTitle>
+          <Link to="/marketplace">
+            <Button variant="outline" size="sm">List New Produce</Button>
+          </Link>
+        </CardHeader>
+        <CardContent>
+          {myProductsList.length === 0 ? (
+            <div className="text-center py-6 text-earth-500">
+              <p className="text-sm">You haven't listed any produce yet.</p>
+              <p className="text-xs text-earth-400 mt-1">Click "List Produce" above to start selling on AgriConnect!</p>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {myProductsList.map(prod => (
+                <Link
+                  key={prod.id}
+                  to={`/marketplace/${prod.id}`}
+                  className="flex items-center justify-between p-3 border border-earth-100 rounded-xl bg-earth-50 hover:bg-earth-100 transition-colors">
+                  <div className="flex items-center gap-3">
+                    {prod.image ? (
+                      <img src={prod.image} alt={prod.name} className="w-10 h-10 rounded-lg object-cover" />
+                    ) : (
+                      <div className="w-10 h-10 rounded-lg bg-agri-100 flex items-center justify-center text-agri-700 font-bold">
+                        {prod.name?.[0] || 'P'}
+                      </div>
+                    )}
+                    <div>
+                      <p className="font-bold text-earth-900">{prod.name}</p>
+                      <p className="text-xs text-earth-500">{prod.category} • ₹{prod.price}/{prod.unit}</p>
+                    </div>
+                  </div>
+                  <Badge variant="success">Active</Badge>
+                </Link>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 
