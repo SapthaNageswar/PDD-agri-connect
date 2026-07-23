@@ -25,11 +25,11 @@ export const BuyerDashboard = () => {
       collection(db, 'products'),
       (snapshot) => {
         const dbProds = snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }));
-        setProducts([...mockProducts, ...dbProds]);
+        setProducts(dbProds);
       },
       (error) => {
-        console.warn('Firestore products unavailable, using mock data:', error.message);
-        setProducts([...mockProducts]);
+        console.warn('Firestore products unavailable:', error.message);
+        setProducts([]);
       }
     );
 
@@ -198,28 +198,35 @@ export const BuyerDashboard = () => {
           </CardHeader>
           <CardContent>
             <div className="space-y-4 mt-2">
-              {(products.length > 0 ? products : mockProducts).slice(0, 5).map((product) =>
-                <Link
-                  key={product.id}
-                  to={`/marketplace/${product.id}`}
-                  className="flex items-center justify-between p-3 hover:bg-earth-50 rounded-xl transition-colors group border border-earth-100">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={product.image || 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800'}
-                      alt={product.name}
-                      className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
-                    />
-                    <div>
-                      <p className="font-bold text-earth-900 group-hover:text-agri-700 transition-colors">
-                        {product.name}
-                      </p>
-                      <p className="text-sm text-earth-500">
-                        {product.seller || 'Farmer'} • ₹{product.price}/{product.unit || 'Unit'}
-                      </p>
+              {products.length === 0 ? (
+                <div className="text-center py-8 text-earth-500">
+                  <p className="text-sm">No produce listed by farmers yet.</p>
+                  <p className="text-xs text-earth-400 mt-1">Check back soon or browse the marketplace!</p>
+                </div>
+              ) : (
+                products.slice(0, 5).map((product) => (
+                  <Link
+                    key={product.id}
+                    to={`/marketplace/${product.id}`}
+                    className="flex items-center justify-between p-3 hover:bg-earth-50 rounded-xl transition-colors group border border-earth-100">
+                    <div className="flex items-center gap-4">
+                      <img
+                        src={product.image || 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&q=80&w=800'}
+                        alt={product.name}
+                        className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
+                      />
+                      <div>
+                        <p className="font-bold text-earth-900 group-hover:text-agri-700 transition-colors">
+                          {product.name}
+                        </p>
+                        <p className="text-sm text-earth-500">
+                          {product.seller || 'Farmer'} • ₹{product.price}/{product.unit || 'Unit'}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-earth-300 group-hover:text-agri-600 transition-colors" />
-                </Link>
+                    <ArrowRight className="h-5 w-5 text-earth-300 group-hover:text-agri-600 transition-colors" />
+                  </Link>
+                ))
               )}
             </div>
           </CardContent>

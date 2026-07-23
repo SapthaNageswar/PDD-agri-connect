@@ -38,15 +38,13 @@ export const Marketplace = () => {
             location: d.location ?? '',
           };
         });
-        setProducts([...mockProducts, ...data]);
+        setProducts(data);
         setLoading(false);
       },
       (error) => {
-        // Firestore rules not yet deployed or network unavailable – fall back
-        // to mock data silently so the marketplace still works.
-        console.warn('Firestore unavailable, using local mock data:', error.message);
+        console.warn('Firestore products load error:', error.message);
         if (!settled) {
-          setProducts([...mockProducts]);
+          setProducts([]);
           setLoading(false);
         }
       }
@@ -210,11 +208,21 @@ export const Marketplace = () => {
 
       {/* No results fallback */}
       {filteredProducts.length === 0 && (
-        <div className="text-center py-20">
-          <p className="text-earth-500 text-lg">No products found matching your criteria.</p>
-          <Button variant="outline" className="mt-4" onClick={() => { setSearch(''); setCategory('All'); }}>
-            Clear Filters
-          </Button>
+        <div className="text-center py-16 bg-earth-50 rounded-3xl border border-earth-200 p-8 max-w-2xl mx-auto">
+          <p className="text-earth-800 text-xl font-bold mb-2">No products in marketplace yet.</p>
+          <p className="text-earth-600 text-sm mb-6">
+            Farmers haven't listed any produce yet. Click "List Produce" to be the first to sell!
+          </p>
+          {role === 'farmer' && (
+            <Button size="lg" onClick={openUpload}>
+              <Plus className="h-5 w-5 mr-2" /> List Produce Now
+            </Button>
+          )}
+          {search || category !== 'All' ? (
+            <Button variant="outline" className="mt-3" onClick={() => { setSearch(''); setCategory('All'); }}>
+              Clear Search Filters
+            </Button>
+          ) : null}
         </div>
       )}
 
